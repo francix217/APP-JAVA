@@ -38,13 +38,15 @@ public class Main {
 				System.out.print("Ingresar Contraseña: ");
 				String contra = scanner.next();
 				
-				if (user.equals(cliente.getUsuario()) && contra.equals(cliente.getContraseña())) {
+				/*
+				if (user.equals(cliente.getUsuario()) && contra.equals(cliente.getContrasena())) {
 					System.out.println("Login correcto");
 					login = true;	
 				} else {
 					System.out.println("Usuario o contraseña incorrectos");
 				}	
-
+				*/
+				
 			}else if (opcion == 4){
 				System.out.println("--Catalogo de Productos--");
 				
@@ -85,13 +87,11 @@ public class Main {
     }
     
     private static Cliente registro(Scanner scanner, Genero genero) {
-		Cliente cliente = new Cliente("", "", "");
-    	
-    	System.out.print("Ingrese el Usuario: ");		
-		cliente.setUsuario(scanner.next());
+    	System.out.print("Ingrese el Usuario: ");			
+		String nombre = scanner.next();
 		
 		System.out.print("Ingresar Contraseña: ");		
-	    cliente.setContraseña(scanner.next());
+		String contra = scanner.next();
 		
 		System.out.println(" --Genero--");		
 		for (Genero g : Genero.values()) {
@@ -100,10 +100,12 @@ public class Main {
 		
 		System.out.print("Selecione su Genero: ");
 		int opcionGenero = scanner.nextInt();
+		
 		   Genero generoSeleccionado = Genero.values()[opcionGenero - 1];
 
-		    cliente.setGenero(generoSeleccionado.name());
 		    
+			Cliente cliente = new Cliente(nombre, contra , generoSeleccionado);
+ 
 		return cliente;
     }
 }  
