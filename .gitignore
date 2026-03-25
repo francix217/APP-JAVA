@@ -1,0 +1,16 @@
+# Generic Eclipse/Android ignores #
+###########################
+bin/
+target
+gen/
+.settings
+.classpath
+.project
+.metadata
+tmp/
+*.tmp
+*.bak
+*.swp
+.settings/
+.loadpath
+.recommenders
