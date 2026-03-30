@@ -4,10 +4,32 @@
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+    	<groupId>org.springframework.boot</groupId>
+    	<artifactId>spring-boot-starter-parent</artifactId>
+    	<version>4.0.5</version>
+    	<relativePath/>
+	</parent>
 
     <groupId>ar.com.franco</groupId>
     <artifactId>App_Java</artifactId>
     <version>1.0.0</version>
 
-
+	<dependencies>		
+		<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter</artifactId>
+		</dependency>
+	</dependencies>
+	
+	<build>
+    	<plugins>
+        	<plugin>
+           		<groupId>org.springframework.boot</groupId>
+            	<artifactId>spring-boot-maven-plugin</artifactId>
+        	</plugin>
+    	</plugins>
+	</build>
+	
 </project>
