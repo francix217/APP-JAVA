@@ -67,7 +67,8 @@ public class Main {
 		}
 		System.out.print("Elegir una opcion: ");
     } 
-     
+
+    
     private static void cargaProductos(Scanner scanner, ArrayList<Producto> listaProductos, Producto producto) {
 		System.out.println("----Carga de Maquinas de Gym----");
 				
