@@ -24,6 +24,7 @@ public class Main {
 		
 		boolean login = false;
 		ArrayList<Producto> listaProductos = new ArrayList<>();
+		ArrayList<Usuario> listaUsuarios = new ArrayList<>();
 		
 		while (!login){
 			
@@ -35,24 +36,12 @@ public class Main {
 				cargaProductos(scanner, listaProductos, null);
 				
 			}else if (opcion == 2){
-				registro(scanner, generoGuardado);
+				Cliente usr = registro(scanner, generoGuardado);
+				listaUsuarios.add(usr);
 				
 			} else if (opcion == 3){
 				
-				System.out.print("Ingrese el Usuario: ");
-				String user = scanner.next();
-
-				System.out.print("Ingresar Contraseña: ");
-				String contra = scanner.next();
-				
-				/*
-				if (user.equals(cliente.getUsuario()) && contra.equals(cliente.getContrasena())) {
-					System.out.println("Login correcto");
-					login = true;	
-				} else {
-					System.out.println("Usuario o contraseña incorrectos");
-				}	
-				*/
+				inicioSesion(scanner, listaUsuarios);
 				
 			}else if (opcion == 4){
 				System.out.println("--Catalogo de Productos--");
@@ -114,5 +103,23 @@ public class Main {
 			Cliente cliente = new Cliente(nombre, contra , generoSeleccionado);
  
 		return cliente;
+    }
+    
+    private static Usuario inicioSesion(Scanner scanner, ArrayList<Usuario> listaUsuarios) {
+		System.out.print("Ingrese el Usuario: ");
+		String user = scanner.next();
+
+		System.out.print("Ingresar Contraseña: ");
+		String contra = scanner.next();
+		
+		for (Usuario usr : listaUsuarios) {
+			if (usr.getUsuario().equals(user) && usr.getContrasena().equals(contra)) {
+				System.out.println("Registro Completo");
+				return usr;
+			}
+		}
+		
+		System.out.println("Registro Incorrecto");
+    	return null;
     }
 }  
