@@ -1,5 +1,7 @@
 package ar.com.franco.AppJava.domain;
 
+
+
 import ar.com.franco.AppJava.emuns.Genero;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,10 +13,10 @@ import jakarta.persistence.Table;
 @Table(name = "CLIENTE")
 
 public class Cliente extends Usuario{
-	
+	    
     @Enumerated(EnumType.STRING)
-    @Column(name = "genero")
-	private Genero genero;
+    @Column(name = "GENERO")
+    private Genero genero;
 	
 	public Cliente(String usuario, String contrasena, Genero genero) {
 		super(usuario, contrasena);
