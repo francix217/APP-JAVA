@@ -1,12 +1,22 @@
 package ar.com.franco.AppJava.domain;
 
-	public class Producto {
-		private int precio;
-		private String nombre;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "PRODUCTO")
+
+public class Producto extends Persisteble{
 		
+		@Column(name = "precio")
+		private int precio;
+		@Column(name = "nombre")
+		private String nombre;
+				
 		public Producto(String nombre, int precio) {
-			this.setNombre(nombre);
-			this.setPrecio(precio);
+			this.nombre = nombre;
+			this.precio = precio;
 		}
 		
 		public void mostrarProducto(){
@@ -31,6 +41,4 @@ package ar.com.franco.AppJava.domain;
 		public void setPrecio(int precio) {
 			this.precio = precio;
 		}
-
-
 }

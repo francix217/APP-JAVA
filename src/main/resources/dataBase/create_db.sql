@@ -1,42 +1,56 @@
-create table USUARIO(
-	ID biginit not null AUTO_INCREMENT,
-	usuario varchar(80) not null,
-	contraseña varchar(80) not null,
+-- =========================
+-- TABLA GENERO
+-- =========================
+CREATE TABLE GENERO(
+	ID INT NOT NULL,
+	valor VARCHAR(50) NOT NULL,
 	PRIMARY KEY(ID)
 );
 
-create table CLIENTE(
-	ID biginit not null,
-	genero varchar(80) not null,
-	ID_ESTADO int not null,
-	PRIMARY KEY(ID)
-	FOREIGN KEY (ID) REFERENCES LOGIN(ID)
-);
-
-alter table CLIENTE add constraint CLI$USU foreign key (ID) references USUARIO(ID);
-
-create table PRODUCTO(
-	ID biginit not null AUTO_INCREMENT,
-	nombre varchar(80) not null,
-	precio int not null,
+-- =========================
+-- TABLA USUARIO (PADRE)
+-- =========================
+CREATE TABLE USUARIO(
+	ID BIGINT NOT NULL AUTO_INCREMENT,
+	usuario VARCHAR(80) NOT NULL,
+	contrasena VARCHAR(80) NOT NULL,
 	PRIMARY KEY(ID)
 );
 
-create table PRODUCTO_CLIENTE(
+-- =========================
+-- TABLA CLIENTE (HIJO)
+-- =========================
+CREATE TABLE CLIENTE(
+	ID BIGINT NOT NULL,
+	ID_GENERO INT NOT NULL,
+	PRIMARY KEY(ID),
+	FOREIGN KEY (ID_GENERO) REFERENCES GENERO(ID)
+);
+
+-- =========================
+-- HERENCIA (CLIENTE → USUARIO)
+-- =========================
+ALTER TABLE CLIENTE 
+ADD CONSTRAINT PROPER 
+FOREIGN KEY (ID) REFERENCES USUARIO(ID);
+
+-- =========================
+-- TABLA PRODUCTO
+-- =========================
+CREATE TABLE PRODUCTO(
+	ID BIGINT NOT NULL AUTO_INCREMENT,
+	nombre VARCHAR(80) NOT NULL,
+	precio INT NOT NULL,
+	PRIMARY KEY(ID)
+);
+
+-- =========================
+-- TABLA INTERMEDIA (N:M)
+-- =========================
+CREATE TABLE PRODUCTO_CLIENTE(
 	ID_CLIENTE BIGINT NOT NULL,
 	ID_PRODUCTO BIGINT NOT NULL,
 	PRIMARY KEY(ID_CLIENTE, ID_PRODUCTO),
-);
-
-create table GENERO(
-	ID int not null ,
-	valor varchar(50) not null,
-	PRIMARY KEY(ID)
-	FOREIGN KEY (ID) REFERENCES USUARIO(ID)
-);
-
-create table LOGIN(
-	ID int not null ,
-	valor varchar(50) not null,
-	PRIMARY KEY(ID)
+	FOREIGN KEY (ID_CLIENTE) REFERENCES CLIENTE(ID),
+	FOREIGN KEY (ID_PRODUCTO) REFERENCES PRODUCTO(ID)
 );

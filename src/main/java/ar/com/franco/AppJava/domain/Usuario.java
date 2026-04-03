@@ -1,16 +1,23 @@
 package ar.com.franco.AppJava.domain;
 
-public class Usuario {
-	private String usuario;
-	private String contrasena;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "USUARIOS")
+
+public class Usuario extends Persisteble{
+	
+	@Column(name = "usuario")
+	private String usuario;
+	
+	@Column(name = "contrasena")
+	private String contrasena;
+	
 	public Usuario(String usuario, String contrasena) {
 		this.usuario = usuario;
 		this.contrasena = contrasena;
-	}
-	
-	public Usuario(){
-		
 	}
 	
 	public String getUsuario() {

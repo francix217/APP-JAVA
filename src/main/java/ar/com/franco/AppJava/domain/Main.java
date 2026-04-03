@@ -18,6 +18,8 @@ public class Main {
 		System.out.println("--Bienvenido a GymTech--");
 		
 		SpringApplication.run(Main.class, args);
+		
+		/*
 		Scanner scanner = new Scanner(System.in);
 			
 		Genero generoGuardado = null;
@@ -123,4 +125,6 @@ public class Main {
 		System.out.println("Registro Incorrecto");
     	return null;
     }
+    */
+	}
 }  
