@@ -1,7 +1,5 @@
 package ar.com.franco.AppJava.domain;
 
-
-
 import ar.com.franco.AppJava.emuns.Genero;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -20,15 +18,28 @@ public class Cliente extends Usuario{
 	
 	public Cliente(String usuario, String contrasena, Genero genero) {
 		super(usuario, contrasena);
-		this.setGenero(genero);
-	}
-
-	public Genero getGenero() {
-		return genero;
-	}
-
-	public void setGenero(Genero genero) {
 		this.genero = genero;
 	}
 	
+	/*
+	public boolean tieneGenero(Genero genero) {
+		return this.genero != null;
+	}
+	
+	public boolean esGenero(Genero genero) {
+		return this.genero == genero;
+	}
+	
+	private void setGenero(Genero genero) {
+		if(genero == null) {
+			throw new IllegalArgumentException("El usuario debe tener min un Genero " );
+		}
+		this.genero = genero;
+	}
+	*/
+	
+	public Genero getGenero() {
+		return genero;
+	}
+		
 }

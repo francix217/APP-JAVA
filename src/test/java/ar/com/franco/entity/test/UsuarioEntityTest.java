@@ -1,5 +1,6 @@
 package ar.com.franco.entity.test;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
@@ -14,6 +15,15 @@ public class UsuarioEntityTest {
 		Usuario u = new Usuario("Franco");
 		
 		assertTrue(u.tieneUsario("Franco"));
+		
+	}
+	
+	@Test
+	public void testTieneUsuarioFailure() {
+		
+		Usuario u = new Usuario("Franco");
+		
+		assertFalse(u.tieneUsario("Francooo"));
 		
 	}
 }

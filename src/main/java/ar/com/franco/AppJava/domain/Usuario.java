@@ -18,7 +18,8 @@ public class Usuario extends Persisteble{
 	private static final int cantMinCaracterUsuario = 5;
 	private static final int cantMaxCaracterUsuario = 70;
 	
-	//private static final int CantCaractercontrasena = "70";;
+	//private static final int cantMinCaracterContrasena = 5;
+	//private static final int cantMaxCaracterContrasena = 70;
 	
 	public Usuario(String usuario) {
 		setUsuario(usuario);
