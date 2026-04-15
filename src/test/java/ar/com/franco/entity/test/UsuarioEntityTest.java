@@ -25,7 +25,7 @@ public class UsuarioEntityTest {
 		
 		Usuario u = UsuarioHelper.createValidUser();
 		
-		assertFalse(u.tieneUsario(UsuarioHelper.));
+		assertFalse(u.tieneUsario(UsuarioHelper.createUser()));
 		
 	}
 	
