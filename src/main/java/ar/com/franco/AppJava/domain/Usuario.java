@@ -2,11 +2,13 @@ package ar.com.franco.AppJava.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "USUARIOS")
-
+@Table(name = "USUARIO")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Usuario extends Persisteble{
 
 	@Column(name = "usuario")
@@ -20,6 +22,9 @@ public class Usuario extends Persisteble{
 	
 	//private static final int cantMinCaracterContrasena = 5;
 	//private static final int cantMaxCaracterContrasena = 70;
+	
+	public Usuario() {
+	}
 	
 	public Usuario(String usuario) {
 		setUsuario(usuario);

@@ -1,23 +1,15 @@
-package ar.com.franco.AppJava.domain;
-
-import java.util.ArrayList;
-import java.util.Scanner;
+package ar.com.franco.AppJava;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import ar.com.franco.AppJava.emuns.Genero;
-import ar.com.franco.AppJava.emuns.Login;
-
 @SpringBootApplication
-
-
 public class Main {
 
 	public static void main(String[] args) {
 		System.out.println("--Bienvenido a GymTech--");
 		
-		SpringApplication.run(Main.class, args);
+		SpringApplication.run(Main.class,args);
 		
 		/*
 		Scanner scanner = new Scanner(System.in);

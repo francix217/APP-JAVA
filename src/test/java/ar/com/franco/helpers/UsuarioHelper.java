@@ -7,9 +7,10 @@ import ar.com.franco.AppJava.domain.Usuario;
 public class UsuarioHelper {
 	
 	public static final String VALID_USER = "Franco";
+	public static final String VALID_CONTRA = "Casa";
 	
 	public final static Usuario createValidUser() {
-		return new Usuario(VALID_USER);
+		return new Usuario(VALID_USER,VALID_CONTRA);
 	}
 	
 	public final static String createUser() {
