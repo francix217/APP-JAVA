@@ -99,6 +99,11 @@
   <classpathentry kind="var" path="M2_REPO/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/xmlunit/xmlunit-core/2.10.3/xmlunit-core-2.10.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/boot/spring-boot-starter-thymeleaf/3.5.5/spring-boot-starter-thymeleaf-3.5.5.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/thymeleaf/thymeleaf-spring6/3.1.3.RELEASE/thymeleaf-spring6-3.1.3.RELEASE.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/thymeleaf/thymeleaf/3.1.3.RELEASE/thymeleaf-3.1.3.RELEASE.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/attoparser/attoparser/2.0.7.RELEASE/attoparser-2.0.7.RELEASE.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/unbescape/unbescape/1.1.6.RELEASE/unbescape-1.1.6.RELEASE.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/junit/platform/junit-platform-engine/1.14.0/junit-platform-engine-1.14.0.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/junit/platform/junit-platform-launcher/1.14.0/junit-platform-launcher-1.14.0.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/mysql/mysql-connector-j/8.2.0/mysql-connector-j-8.2.0.jar"/>

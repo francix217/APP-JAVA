@@ -57,6 +57,11 @@
 		    </exclusions>
 		</dependency>
 		
+		<dependency>
+    		<groupId>org.springframework.boot</groupId>
+    		<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		
 		<!-- spring-boot-starter-test descarga la versión 1.12.2 la cual no es compatible con JUnit 5 -->
 		<!-- se debe excluir y descargar a mano nuevas versiones de junit-platform & junit-launcher   -->
 		<dependency>
