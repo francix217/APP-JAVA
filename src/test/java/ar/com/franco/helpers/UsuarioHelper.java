@@ -10,7 +10,7 @@ public class UsuarioHelper {
 	public static final String VALID_CONTRA = "Casa";
 	
 	public final static Usuario createValidUser() {
-		return new Usuario(VALID_USER,VALID_CONTRA);
+		return new Usuario(VALID_USER,VALID_CONTRA, null, null);
 	}
 	
 	public final static String createUser() {

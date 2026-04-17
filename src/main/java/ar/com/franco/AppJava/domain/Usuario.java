@@ -17,6 +17,13 @@ public class Usuario extends Persisteble{
 	@Column(name = "contrasena")
 	private String contrasena;
 	
+    @Enumerated(EnumType.STRING)
+    @Column(name = "genero")
+    private Genero genero;
+
+    @Column(name = "rol")
+    private String rol;
+	
 	private static final int cantMinCaracterUsuario = 5;
 	private static final int cantMaxCaracterUsuario = 70;
 	
