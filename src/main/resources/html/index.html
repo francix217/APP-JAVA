@@ -1,31 +1,62 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <title>Pagina de Prueba</title>
-
+    <meta charset="UTF-8">
+    <title>GymTech</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <h1 id="titulo1" class="colorNaranja">
-        Este es el titulo 1
-    </h1>
 
-    <h2 id="titulo2" class="colorNaranja" style="color: #454545">
-        Este es el titulo 2
-    </h2>
+<div class="login-box">
+    <h1>💪 GymTech</h1>
 
-    <p id="parrafo" class="colorNaranja" onclick="changeColor('yellow');">
-        Este es nuestro texto de prueba
-    </p>
+    <!-- TABS PRINCIPALES -->
+    <div class="tabs">
+        <div class="tab active" id="adminTab">ADMIN</div>
+        <div class="tab" id="userTab">USUARIO</div>
+    </div>
 
-    <a id="LinkGoogle" href="http://www.google.com.ar" target="_blank">
-        Ir a Google
-    </a>
+    <!-- SUBTABS -->
+    <div class="subtabs" id="userOptions" style="display:none;">
+        <div class="subtab active" id="loginUserTab">INICIAR SESIÓN</div>
+        <div class="subtab" id="registerUserTab">REGISTRARSE</div>
+    </div>
+
+    <form id="loginForm">
+
+        <!-- USUARIO -->
+        <div class="input-group">
+            <span>👤</span>
+            <input type="text" id="usuario" placeholder="Usuario" required>
+        </div>
+
+        <!-- PASSWORD -->
+        <div class="input-group">
+            <span>🔒</span>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <span id="togglePass" style="cursor:pointer;">👁</span>
+        </div>
+
+        <!-- GENERO SOLO REGISTRO -->
+        <select id="genero" style="display:none;">
+            <option value="">Seleccionar género</option>
+            <option>MASCULINO</option>
+            <option>FEMENINO</option>
+            <option>NO_BINARIO</option>
+            <option>OTRO</option>
+        </select>
+
+        <button type="submit">Ingresar</button>
+
+        <p id="error" class="error"></p>
+        <p id="success" class="success"></p>
+
+    </form>
+</div>
+
+<script src="../javascript/jquery-4.0.0.min.js"></script>
+<script src="../javascript/functions.js"></script>
 
 </body>
-
-    <footer>
-        <script src="../javascript/jquery-4.0.0.min.js"></script>
-        <script src="../javascript/functions.js"></script>
-    </footer>
 </html>
