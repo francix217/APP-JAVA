@@ -1,7 +1,10 @@
 package ar.com.franco.AppJava.domain;
 
+import ar.com.franco.AppJava.emuns.Genero;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
 import jakarta.persistence.Table;
@@ -37,9 +40,11 @@ public class Usuario extends Persisteble{
 		setUsuario(usuario);
 	}
 	
-	public Usuario(String usuario, String contrasena) {
+	public Usuario(String usuario, String contrasena,Genero genero, String rol) {
 		this.usuario = usuario;
 	    this.contrasena = contrasena;
+	    this.genero = genero;
+	    this.rol = rol;
 	}
 	
 	public boolean tieneUsario(String usuario){
@@ -66,9 +71,21 @@ public class Usuario extends Persisteble{
 		this.contrasena = contrasena;
 	}
 	
+    public Genero getGenero() { 
+    	return genero; 
+    }
+    
+    public String getRol() { 
+    	return rol; 
+    }
 	
-	
-	
+    public void setGenero(Genero genero) { 
+    	this.genero = genero; 
+    }
+    
+    public void setRol(String rol) { 
+    	this.rol = rol; 
+    }
 	
 	
 	
