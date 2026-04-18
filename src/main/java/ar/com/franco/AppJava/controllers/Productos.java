@@ -8,6 +8,6 @@ public class Productos {
 	
     @GetMapping("/productos")
     public String productos() {
-        return "productos";
+        return "productos/productos";
     }
 }
