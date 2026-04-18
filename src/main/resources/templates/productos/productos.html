@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Productos Gym</title>
+</head>
 <body>
 
 <h1>Productos Gym 💪</h1>
@@ -8,6 +11,29 @@
     <li>Mancuernas - $5000</li>
     <li>Proteína - $12000</li>
 </ul>
+
+<h2>Agregar Producto</h2>
+
+<form th:action="@{/productos/guardar}" th:object="${form}" method="post">
+
+    <div>
+        <input type="text" th:field="*{nombre}" th:placeholder="#{producto.nombre}">
+    </div>
+
+    <br>
+
+    <div>
+        <span>$</span>
+        <input type="number" th:field="*{precio}" th:placeholder="#{producto.precio}">
+    </div>
+
+    <br>
+
+    <button type="submit" th:text="#{boton.guardar}"></button>
+
+</form>
+
+<br>
 
 <a th:href="@{/}">Volver</a>
 
