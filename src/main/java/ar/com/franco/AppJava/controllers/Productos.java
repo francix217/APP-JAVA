@@ -14,7 +14,7 @@ public class Productos{
     @GetMapping("/productos")
     public String verProductos(Model model) {
         model.addAttribute("producto", new ProductoForm());
-        return "productos";
+        return "productos/productos";
     }
 
     @PostMapping("/productos")
@@ -23,6 +23,6 @@ public class Productos{
         System.out.println("Nombre: " + producto.getNombre());
         System.out.println("Precio: " + producto.getPrecio());
 
-        return "/productos";
+        return "productos/productos";
     }
 }

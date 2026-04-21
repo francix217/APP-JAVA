@@ -1,40 +1,20 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Productos Gym</title>
-</head>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/layout">
+
 <body>
 
-<h1>Productos Gym 💪</h1>
+<div layout:fragment="content">
 
-<ul>
-    <li>Mancuernas - $5000</li>
-    <li>Proteína - $12000</li>
-</ul>
+    <h1>Productos 💪</h1>
 
-<h2>Agregar Producto</h2>
+    <ul>
+        <li>Mancuernas - $5000</li>
+        <li>Proteína - $12000</li>
+    </ul>
 
-<form th:action="@{/productos}" th:object="${producto}" method="post">
-
-    <label th:text="#{producto.nombre}"></label>
-    <input type="text" th:field="*{nombre}" 
-           th:placeholder="#{producto.nombre}"/>
-
-    <br><br>
-
-    <label th:text="#{producto.precio}"></label>
-    <input type="number" th:field="*{precio}" 
-           th:placeholder="#{producto.precio}"/>
-
-    <br><br>
-
-    <button type="submit" th:text="#{producto.guardar}"></button>
-
-</form>
-
-<br>
-
-<a th:href="@{/}">Volver</a>
+</div>
 
 </body>
 </html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <title>GymTech</title>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div th:replace="fragments/navbar :: navbar"></div>
+
+<!-- CONTENIDO DINÁMICO -->
+<div layout:fragment="content">
+    <!-- acá se inyecta todo -->
+</div>
+
+</body>
+</html>

@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/layout">
+
 <body>
 
-<h2>Login GymTech</h2>
+<div layout:fragment="content">
 
-<form action="/login" method="post">
-    <input type="text" name="usuario" placeholder="Usuario">
-    <input type="password" name="contrasena" placeholder="Contraseña">
-    <button type="submit">Ingresar</button>
-</form>
+    <h1>Login GymTech</h1>
+
+    <form action="/login" method="post">
+        <input type="text" name="usuario" placeholder="Usuario">
+        <br><br>
+        <input type="password" name="contrasena" placeholder="Contraseña">
+        <br><br>
+        <button type="submit">Ingresar</button>
+    </form>
+
+</div>
 
 </body>
 </html>
