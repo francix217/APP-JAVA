@@ -158,3 +158,78 @@ body {
 .register-box button:hover {
     background-color: #ff5e2e;
 }
+
+/* RESET */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    /* FONDO */
+    background-image: url('/img/fondoProducto.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* CONTENEDOR */
+.contenedor-productos {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* CARD */
+.card {
+    width: 250px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+/* ANIMACIÓN */
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+}
+
+/* IMAGEN */
+.imagen {
+    width: 100%;
+    height: 160px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* IMÁGENES */
+.press {
+    background-image: url('/img/press-banca.jpg');
+}
+
+.mancuernas {
+    background-image: url('/img/mancuernas.jpg');
+}
+
+/* TEXTO */
+.card h3 {
+    margin: 10px 0;
+}
+
+.card p {
+    margin: 5px 0;
+    font-weight: bold;
+}
