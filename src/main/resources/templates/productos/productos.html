@@ -14,22 +14,21 @@
 
 <h2>Agregar Producto</h2>
 
-<form th:action="@{/productos/guardar}" th:object="${form}" method="post">
+<form th:action="@{/productos}" th:object="${producto}" method="post">
 
-    <div>
-        <input type="text" th:field="*{nombre}" th:placeholder="#{producto.nombre}">
-    </div>
+    <label th:text="#{producto.nombre}"></label>
+    <input type="text" th:field="*{nombre}" 
+           th:placeholder="#{producto.nombre}"/>
 
-    <br>
+    <br><br>
 
-    <div>
-        <span>$</span>
-        <input type="number" th:field="*{precio}" th:placeholder="#{producto.precio}">
-    </div>
+    <label th:text="#{producto.precio}"></label>
+    <input type="number" th:field="*{precio}" 
+           th:placeholder="#{producto.precio}"/>
 
-    <br>
+    <br><br>
 
-    <button type="submit" th:text="#{boton.guardar}"></button>
+    <button type="submit" th:text="#{producto.guardar}"></button>
 
 </form>
 

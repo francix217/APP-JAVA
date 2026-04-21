@@ -9,20 +9,20 @@ import ar.com.franco.AppJava.form.ProductoForm;
 
 
 @Controller
-public class Productos {
-	
-	@GetMapping("/productos")
-	public String productos(Model model) {
-	    model.addAttribute("form", new ProductoForm());
-	    return "productos/productos";
-	}
-    
-    @PostMapping
-    public String guardar(ProductoForm form) {
-        System.out.println(form.getNombre());
-        System.out.println(form.getPrecio());
-        return "redirect:/productos";
+public class Productos{
+
+    @GetMapping("/productos")
+    public String verProductos(Model model) {
+        model.addAttribute("producto", new ProductoForm());
+        return "productos";
     }
-    
-    
+
+    @PostMapping("/productos")
+    public String guardar(ProductoForm producto) {
+
+        System.out.println("Nombre: " + producto.getNombre());
+        System.out.println("Precio: " + producto.getPrecio());
+
+        return "/productos";
+    }
 }
