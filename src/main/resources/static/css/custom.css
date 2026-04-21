@@ -1,13 +1,160 @@
 body {
-    background-color: #0f0f0f !important;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
     color: white;
 }
 
-h1 {
-    color: #ff3c00 !important;
+/* HERO CON IMAGEN */
+.hero {
+    height: 100vh;
+
+    background: 
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.95)),
+        url('/images/gym.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-button {
-    background-color: #ff3c00 !important;
+/* TITULO */
+.hero h1 {
+    font-size: 60px;
+    color: #ff3c00;
+    text-shadow: 2px 2px 10px black;
+}
+
+/* TEXTO */
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 10px black;
+}
+
+/* BOTONES */
+.botones button {
+    margin: 10px;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* BOTON PRINCIPAL */
+.principal {
+    background-color: #ff3c00;
+}
+
+/* HOVER */
+.botones button:hover {
+    transform: scale(1.05);
+    background-color: #ff3c00;
+}
+
+/* LOGIN PAGE */
+.login-container {
+    height: 100vh;
+
+    background: 
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+        url('/images/login-bg.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CAJA LOGIN */
+.login-box {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px;
+}
+
+/* INPUTS */
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
     border-radius: 8px;
+}
+
+/* BOTON */
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff3c00;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+/* HOVER */
+.login-box button:hover {
+    background-color: #ff5e2e;
+}
+
+/* REGISTER PAGE */
+.register-container {
+    height: 100vh;
+
+    background: 
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+        url('/images/register-bg.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CAJA */
+.register-box {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 40px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+}
+
+/* INPUTS */
+.register-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+}
+
+/* BOTON */
+.register-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff3c00;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+/* HOVER */
+.register-box button:hover {
+    background-color: #ff5e2e;
 }

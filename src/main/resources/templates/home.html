@@ -7,27 +7,28 @@
 
 <div layout:fragment="content">
 
-    <h1>💪 Bienvenido a GymTech</h1>
+    <div class="hero">
 
-    <p>Tu tienda de productos de gimnasio</p>
+        <div>
+            <h1>💪 GymTech</h1>
+            <p>Potenciá tu entrenamiento con los mejores productos fitness</p>
 
-    <br>
+            <div class="botones">
+                <a th:href="@{/productos}">
+                    <button class="principal">🏋️ Ver Productos</button>
+                </a>
 
-    <a th:href="@{/login}">
-        <button>🔐 Iniciar Sesión</button>
-    </a>
+                <a th:href="@{/login}">
+                    <button>🔐 Iniciar Sesión</button>
+                </a>
 
-    <br><br>
+                <a th:href="@{/registro}">
+                    <button>📝 Registrarse</button>
+                </a>
+            </div>
+        </div>
 
-    <a th:href="@{/registro}">
-        <button>📝 Registrarse</button>
-    </a>
-
-    <br><br>
-
-    <a th:href="@{/productos}">
-        <button>🏋️ Ver Productos</button>
-    </a>
+    </div>
 
 </div>
 
