@@ -217,11 +217,11 @@ body {
 
 /* IMÁGENES */
 .press {
-    background-image: url('/img/press-banca.jpg');
+    background-image: url('../images/press-banca.jpg');
 }
 
 .mancuernas {
-    background-image: url('/img/mancuernas.jpg');
+    background-image: url('../images/mancuernas.jpg');
 }
 
 /* TEXTO */

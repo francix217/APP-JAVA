@@ -11,7 +11,7 @@ import ar.com.franco.AppJava.form.ProductoForm;
 @Controller
 public class Productos{
 
-    @GetMapping("/productos")
+    @GetMapping("/verProductos")
     public String verProductos(Model model) {
         model.addAttribute("producto", new ProductoForm());
         return "productos/productos";
