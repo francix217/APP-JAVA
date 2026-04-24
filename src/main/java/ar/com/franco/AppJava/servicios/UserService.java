@@ -24,7 +24,6 @@ public class UserService {
         repository.save(u);
     }
 
-    // 🔥 ESTE TE FALTABA
     public List<Usuario> listarUsuarios() {
         return repository.findAll();
     }

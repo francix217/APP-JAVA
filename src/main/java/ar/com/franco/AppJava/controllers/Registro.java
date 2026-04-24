@@ -21,7 +21,7 @@ public class Registro {
     @GetMapping("/registro")
     public String mostrarRegistro(Model model) {
         model.addAttribute("form", new UserForm());
-        return "registro";
+        return "registro/registro";
     }
 
     @PostMapping("/registro")
