@@ -13,22 +13,22 @@
 
             <h2>📝 Registrarse</h2>
 
-<form th:action="@{/registro}" th:object="${form}" method="post">
+            <form th:action="@{/registro}" th:object="${form}" method="post">
 
-    <input type="text" th:field="*{usuario}" placeholder="Usuario" required>
+                <input type="text" th:field="*{usuario}" placeholder="Usuario" required>
 
-    <input type="password" th:field="*{contrasena}" placeholder="Contraseña" required>
+                <input type="password" th:field="*{contrasena}" placeholder="Contraseña" required>
 
-    <select th:field="*{genero}">
-        <option value="MASCULINO">MASCULINO</option>
-        <option value="FEMENINO">FEMENINO</option>
-        <option value="NO_BINARIO">NO_BINARIO</option>
-        <option value="OTRO">OTRO</option>
-    </select>
+                <select th:field="*{genero}">
+                    <option value="MASCULINO">MASCULINO</option>
+                    <option value="FEMENINO">FEMENINO</option>
+                    <option value="NO_BINARIO">NO_BINARIO</option>
+                    <option value="OTRO">OTRO</option>
+                </select>
 
-    <button type="submit">Crear Cuenta</button>
+                <button type="submit">Crear Cuenta</button>
 
-</form>
+            </form>
 
         </div>
 
