@@ -11,31 +11,31 @@
 
 <div class="container">
 
-    <form th:object="${form}">
+<form th:object="${form}" th:action="@{/adm/users/save}" method="post">
 
-        <label>Usuario</label>
-        <input type="text" th:field="*{usuario}" placeholder="Ingrese usuario">
+    <label>Usuario</label>
+    <input type="text" th:field="*{usuario}" placeholder="Ingrese usuario">
 
-        <label>Contraseña</label>
-        <input type="password" th:field="*{contrasena}" placeholder="Ingrese contraseña">
+    <label>Contraseña</label>
+    <input type="password" th:field="*{contrasena}" placeholder="Ingrese contraseña">
 
-        <label>Rol</label>
-        <select th:field="*{rol}">
-            <option value="ADMIN">ADMIN</option>
-            <option value="USER">USER</option>
-        </select>
+    <label>Rol</label>
+    <select th:field="*{rol}">
+        <option value="ADMIN">ADMIN</option>
+        <option value="USER">USER</option>
+    </select>
 
-        <label>Género</label>
-        <select th:field="*{genero}">
-            <option value="MASCULINO">MASCULINO</option>
-            <option value="FEMENINO">FEMENINO</option>
-            <option value="NO_BINARIO">NO_BINARIO</option>
-            <option value="OTRO">OTRO</option>
-        </select>
+    <label>Género</label>
+    <select th:field="*{genero}">
+        <option value="MASCULINO">MASCULINO</option>
+        <option value="FEMENINO">FEMENINO</option>
+        <option value="NO_BINARIO">NO_BINARIO</option>
+        <option value="OTRO">OTRO</option>
+    </select>
 
-        <button type="submit" class="guardar">💾 Guardar</button>
+    <button type="submit" class="guardar">💾 Guardar</button>
 
-    </form>
+</form>
 
     <br>
 
