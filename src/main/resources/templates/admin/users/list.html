@@ -2,8 +2,6 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Admin - Usuarios</title>
-
-    <!-- IMPORTANTE -->
     <link rel="stylesheet" th:href="@{/css/custom.css}">
 </head>
 
@@ -13,22 +11,29 @@
 
 <div class="container">
 
+    <!-- 🔥 Botón centrado -->
+    <div class="acciones-top">
+        <a th:href="@{/adm/users/edit}">
+            <button class="nuevo">➕ Nuevo Usuario</button>
+        </a>
+    </div>
+
     <table>
         <thead>
             <tr>
                 <th>Usuario</th>
                 <th>Contraseña</th>
+                <th>Rol</th>
+                <th>Género</th>
             </tr>
         </thead>
 
         <tbody>
-            <tr>
-                <td>root</td>
-                <td>1234</td>
-                <td>
-                    <button class="btn editar">Editar</button>
-                    <button class="btn eliminar">Eliminar</button>
-                </td>
+            <tr th:each="u : ${usuarios}">
+                <td th:text="${u.usuario}"></td>
+                <td th:text="${u.contrasena}"></td>
+                <td th:text="${u.rol}"></td>
+                <td th:text="${u.genero}"></td>
             </tr>
         </tbody>
     </table>

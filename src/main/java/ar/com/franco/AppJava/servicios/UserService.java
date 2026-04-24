@@ -1,5 +1,6 @@
 package ar.com.franco.AppJava.servicios;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,5 +22,10 @@ public class UserService {
 
     public void guardarUsuario(Usuario u) {
         repository.save(u);
+    }
+
+    // 🔥 ESTE TE FALTABA
+    public List<Usuario> listarUsuarios() {
+        return repository.findAll();
     }
 }

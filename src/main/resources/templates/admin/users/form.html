@@ -19,12 +19,6 @@
     <label>Contraseña</label>
     <input type="password" th:field="*{contrasena}" placeholder="Ingrese contraseña">
 
-    <label>Rol</label>
-    <select th:field="*{rol}">
-        <option value="ADMIN">ADMIN</option>
-        <option value="USER">USER</option>
-    </select>
-
     <label>Género</label>
     <select th:field="*{genero}">
         <option value="MASCULINO">MASCULINO</option>
@@ -33,7 +27,7 @@
         <option value="OTRO">OTRO</option>
     </select>
 
-    <button type="submit" class="guardar">💾 Guardar</button>
+    <button type="submit">Guardar</button>
 
 </form>
 

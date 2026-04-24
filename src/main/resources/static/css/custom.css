@@ -247,7 +247,7 @@ body {
     text-shadow: 0 0 10px #00f0ff;
 }
 
-/* RESET TOTAL */
+/* ----------------- RESET ----------------- */
 * {
     margin: 0;
     padding: 0;
@@ -258,14 +258,14 @@ html, body {
     height: 100%;
 }
 
-/* FONDO NEON OSCURO */
+/* ----------------- FONDO ----------------- */
 body {
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(135deg, #0a0a0f, #111122, #0a0a0f);
     color: white;
 }
 
-/* EFECTO GLOW GENERAL */
+/* Glow suave */
 body::before {
     content: "";
     position: fixed;
@@ -274,7 +274,7 @@ body::before {
     z-index: -1;
 }
 
-/* NAVBAR */
+/* ----------------- NAVBAR ----------------- */
 .navbar {
     background: rgba(0, 0, 0, 0.9);
     padding: 15px;
@@ -282,7 +282,6 @@ body::before {
     border-bottom: 1px solid rgba(0,240,255,0.2);
 }
 
-/* LINKS NAVBAR */
 .navbar a {
     color: #00f0ff;
     margin: 0 10px;
@@ -294,7 +293,7 @@ body::before {
     text-shadow: 0 0 10px #00f0ff;
 }
 
-/* TITULO */
+/* ----------------- TITULO ----------------- */
 h1 {
     text-align: center;
     margin: 30px 0;
@@ -303,35 +302,42 @@ h1 {
     text-shadow: 0 0 10px #00f0ff, 0 0 25px #8a2be2;
 }
 
-/* CONTENEDOR */
+/* ----------------- CONTENEDOR ----------------- */
 .container {
     width: 85%;
     margin: auto;
 }
 
-/* BOTON NUEVO */
+/* ----------------- BOTON NUEVO (MEJORADO) ----------------- */
 .nuevo {
     display: block;
-    width: 230px;
-    margin: 20px auto;
-    padding: 12px;
+    width: 260px;
+    margin: 25px auto;
+    padding: 14px;
     background: linear-gradient(45deg, #00f0ff, #8a2be2);
     border: none;
-    border-radius: 12px;
+    border-radius: 16px;
     color: white;
-    font-size: 16px;
+    font-size: 17px;
+    font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
 }
 
 .nuevo:hover {
-    transform: scale(1.07);
-    box-shadow: 0 0 15px #00f0ff, 0 0 30px #8a2be2;
+    transform: scale(1.06) translateY(-2px);
+    box-shadow: 0 0 18px #00f0ff, 0 0 40px #8a2be2;
 }
 
-/* TABLA */
+.nuevo:active {
+    transform: scale(0.97);
+}
+
+/* ----------------- TABLA ----------------- */
 table {
     width: 100%;
+    margin-top: 20px;
     border-collapse: collapse;
     background: rgba(20, 20, 40, 0.6);
     backdrop-filter: blur(10px);
@@ -360,7 +366,7 @@ tr:hover {
     background: rgba(0, 240, 255, 0.1);
 }
 
-/* BOTONES */
+/* ----------------- BOTONES ----------------- */
 .btn {
     padding: 6px 12px;
     border: none;
@@ -388,4 +394,29 @@ tr:hover {
 
 .eliminar:hover {
     box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+
+/* ----------------- FORM ----------------- */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: linear-gradient(45deg, #00f0ff, #8a2be2);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    box-shadow: 0 0 10px #00f0ff, 0 0 20px #8a2be2;
 }
