@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin - Usuarios</title>
+
+    <!-- IMPORTANTE -->
+    <link rel="stylesheet" th:href="@{/css/custom.css}">
+</head>
+
+<body>
+
+<h1>⚙️ Panel de Administración - Usuarios</h1>
+
+<div class="container">
+
+    <table>
+        <thead>
+            <tr>
+                <th>Usuario</th>
+                <th>Contraseña</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>root</td>
+                <td>1234</td>
+                <td>
+                    <button class="btn editar">Editar</button>
+                    <button class="btn eliminar">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>

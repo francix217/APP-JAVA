@@ -233,3 +233,159 @@ body {
     margin: 5px 0;
     font-weight: bold;
 }
+
+/* ----------------- ADMIN - LIST ------------*/
+.admin-link {
+    color: #ff004c;
+    font-weight: bold;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.admin-link:hover {
+    color: #00f0ff;
+    text-shadow: 0 0 10px #00f0ff;
+}
+
+/* RESET TOTAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* FONDO NEON OSCURO */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0a0a0f, #111122, #0a0a0f);
+    color: white;
+}
+
+/* EFECTO GLOW GENERAL */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(0,240,255,0.08), transparent 60%);
+    z-index: -1;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,240,255,0.2);
+}
+
+/* LINKS NAVBAR */
+.navbar a {
+    color: #00f0ff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-shadow: 0 0 10px #00f0ff;
+}
+
+/* TITULO */
+h1 {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 36px;
+    color: #00f0ff;
+    text-shadow: 0 0 10px #00f0ff, 0 0 25px #8a2be2;
+}
+
+/* CONTENEDOR */
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+/* BOTON NUEVO */
+.nuevo {
+    display: block;
+    width: 230px;
+    margin: 20px auto;
+    padding: 12px;
+    background: linear-gradient(45deg, #00f0ff, #8a2be2);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nuevo:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 15px #00f0ff, 0 0 30px #8a2be2;
+}
+
+/* TABLA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(20, 20, 40, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,240,255,0.1);
+}
+
+/* HEADER */
+th {
+    background: rgba(0,0,0,0.9);
+    color: #00f0ff;
+    padding: 15px;
+    font-size: 16px;
+}
+
+/* CELDAS */
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* HOVER FILA */
+tr:hover {
+    background: rgba(0, 240, 255, 0.1);
+}
+
+/* BOTONES */
+.btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+/* EDITAR */
+.editar {
+    background: #00f0ff;
+    color: black;
+}
+
+.editar:hover {
+    box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+}
+
+/* ELIMINAR */
+.eliminar {
+    background: #ff00ff;
+    color: white;
+}
+
+.eliminar:hover {
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
