@@ -14,10 +14,10 @@
 <form th:object="${form}" th:action="@{/adm/users/save}" method="post">
 
     <label>Usuario</label>
-    <input type="text" th:field="*{usuario}" placeholder="Ingrese usuario">
+    <input type="text" th:field="*{usuario}" placeholder="Ingrese usuario" required>
 
     <label>Contraseña</label>
-    <input type="password" th:field="*{contrasena}" placeholder="Ingrese contraseña">
+    <input type="password" th:field="*{contrasena}" placeholder="Ingrese contraseña" required>
 
     <label>Género</label>
     <select th:field="*{genero}">

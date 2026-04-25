@@ -7,5 +7,4 @@ import ar.com.franco.AppJava.domain.Usuario;
 
 @Repository
 public interface UserRepository extends JpaRepository<Usuario, Long>{
-
 }

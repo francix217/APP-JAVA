@@ -28,13 +28,13 @@ public class UserAdminController {
 
         return PATH_PAGES_URL + "/list";
     }
-    
+
     @GetMapping(PATH_CONTEXT_URL + "/edit")
     public String edit(Model model) {
         model.addAttribute(FORM_ATTRIBUTE, new UserForm());
         return PATH_PAGES_URL + "/form";
     }
-    
+  
     @PostMapping(PATH_CONTEXT_URL + "/save")
     public String save(@ModelAttribute("form") UserForm formulario) {
 
