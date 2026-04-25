@@ -3,37 +3,37 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layout}">
 
+<head>
+    <title>Registro</title>
+    <link rel="stylesheet" th:href="@{/css/custom.css}">
+</head>
+
 <body>
 
-<div layout:fragment="content">
+<div class="register-container">
+    <div class="register-box">
+        <h2>Registrarse</h2>
 
-    <div class="register-container">
+        <form th:action="@{/registro}" method="post" th:object="${form}">
 
-        <div class="register-box">
+            <input type="text" th:field="*{usuario}" placeholder="Usuario" required>
 
-            <h2>📝 Registrarse</h2>
+            <!-- PASSWORD SIN OJO -->
+            <div class="password-container">
+                <input type="password" th:field="*{contrasena}" id="password" placeholder="Contraseña" required>
+            </div>
 
-            <form th:action="@{/registro}" th:object="${form}" method="post">
+            <select th:field="*{genero}">
+                <option value="MASCULINO">Masculino</option>
+                <option value="FEMENINO">Femenino</option>
+                <option value="NO_BINARIO">No binario</option>
+                <option value="OTRO">Otro</option>
+            </select>
 
-                <input type="text" th:field="*{usuario}" placeholder="Usuario" required>
+            <button type="submit">Registrarse</button>
 
-                <input type="password" th:field="*{contrasena}" placeholder="Contraseña" required>
-
-                <select th:field="*{genero}">
-                    <option value="MASCULINO">MASCULINO</option>
-                    <option value="FEMENINO">FEMENINO</option>
-                    <option value="NO_BINARIO">NO_BINARIO</option>
-                    <option value="OTRO">OTRO</option>
-                </select>
-
-                <button type="submit">Crear Cuenta</button>
-
-            </form>
-
-        </div>
-
+        </form>
     </div>
-
 </div>
 
 </body>

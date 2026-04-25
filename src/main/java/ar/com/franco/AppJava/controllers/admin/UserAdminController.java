@@ -20,23 +20,20 @@ public class UserAdminController {
     @Autowired
     private UserService servicio;
 
-    // 🔥 LISTAR USUARIOS (CORREGIDO)
     @GetMapping(PATH_CONTEXT_URL)
     public String init(Model model) {
 
-        model.addAttribute("usuarios", servicio.listarUsuarios()); // 🔥 ESTO FALTABA
+        model.addAttribute("usuarios", servicio.listarUsuarios()); 
 
         return PATH_PAGES_URL + "/list";
     }
-
-    // 🔵 FORMULARIO
+    
     @GetMapping(PATH_CONTEXT_URL + "/edit")
     public String edit(Model model) {
         model.addAttribute(FORM_ATTRIBUTE, new UserForm());
         return PATH_PAGES_URL + "/form";
     }
     
-    // 🔵 GUARDAR
     @PostMapping(PATH_CONTEXT_URL + "/save")
     public String save(@ModelAttribute("form") UserForm formulario) {
 
@@ -53,4 +50,5 @@ public class UserAdminController {
 
         return "redirect:/adm/users";
     }
+    
 }

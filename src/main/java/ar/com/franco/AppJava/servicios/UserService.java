@@ -27,4 +27,5 @@ public class UserService {
     public List<Usuario> listarUsuarios() {
         return repository.findAll();
     }
+    
 }
