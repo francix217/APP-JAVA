@@ -22,7 +22,7 @@
         </thead>
 
         <tbody>
-            <tr th:each="usuario : ${usuarios}">
+            <tr th:each="usuario : ${listado}">
                 <td th:text="${usuario.usuario}"></td>
                 <td th:text="${usuario.contrasena}"></td>
                 <td th:text="${usuario.genero}"></td>
