@@ -481,3 +481,17 @@ button[type="submit"]:hover {
     top: 8px;
     cursor: pointer;
 }
+
+/* ----------------- */
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.is-invalid {
+    border: 2px solid red;
+}
+
+/* ----------------- */

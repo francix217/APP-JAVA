@@ -3,37 +3,45 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layout}">
 
-<head>
-    <title>Registro</title>
-    <link rel="stylesheet" th:href="@{/css/custom.css}">
-</head>
-
 <body>
 
-<div class="register-container">
-    <div class="register-box">
-        <h2>Registrarse</h2>
+<div layout:fragment="content">
 
-        <form th:action="@{/registro}" method="post" th:object="${form}">
+    <div class="register-container">
+        <div class="register-box">
+            <h2>Registrarse</h2>
 
-            <input type="text" th:field="*{usuario}" placeholder="Usuario" required>
+            <form th:action="@{/registro}" method="post" th:object="${form}">
 
-            <!-- PASSWORD SIN OJO -->
-            <div class="password-container">
-                <input type="password" th:field="*{contrasena}" id="password" placeholder="Contraseña" required>
-            </div>
+                <!-- USUARIO -->
+                <input type="text" th:field="*{usuario}" placeholder="Usuario"
+                       th:classappend="${#fields.hasErrors('usuario')} ? 'is-invalid'">
+                <div class="error" th:errors="*{usuario}"></div>
 
-            <select th:field="*{genero}">
-                <option value="MASCULINO">Masculino</option>
-                <option value="FEMENINO">Femenino</option>
-                <option value="NO_BINARIO">No binario</option>
-                <option value="OTRO">Otro</option>
-            </select>
+                <!-- PASSWORD -->
+                <div class="password-container">
+                    <input type="password" th:field="*{contrasena}" placeholder="Contraseña"
+                           th:classappend="${#fields.hasErrors('contrasena')} ? 'is-invalid'">
+                </div>
+                <div class="error" th:errors="*{contrasena}"></div>
 
-            <button type="submit">Registrarse</button>
+                <!-- GENERO -->
+                <select th:field="*{genero}"
+                        th:classappend="${#fields.hasErrors('genero')} ? 'is-invalid'">
+                    <option value="">Seleccionar</option>
+                    <option value="MASCULINO">Masculino</option>
+                    <option value="FEMENINO">Femenino</option>
+                    <option value="NO_BINARIO">No binario</option>
+                    <option value="OTRO">Otro</option>
+                </select>
+                <div class="error" th:errors="*{genero}"></div>
 
-        </form>
+                <button type="submit">Registrarse</button>
+
+            </form>
+        </div>
     </div>
+
 </div>
 
 </body>

@@ -13,11 +13,23 @@
 
             <h2>🔐 Iniciar Sesión</h2>
 
-            <form th:action="@{/login}" method="post">
+            <form th:action="@{/login}" method="post" th:object="${form}">
 
-                <input type="text" name="username" placeholder="Usuario" required>
+                <!-- USUARIO -->
+                <input type="text" th:field="*{usuario}" placeholder="Usuario"
+                       th:classappend="${#fields.hasErrors('usuario')} ? 'is-invalid'">
 
-                <input type="password" name="password" placeholder="Contraseña" required>
+                <div class="error" th:if="${#fields.hasErrors('usuario')}"
+                     th:errors="*{usuario}"></div>
+
+
+                <!-- PASSWORD -->
+                <input type="password" th:field="*{contrasena}" placeholder="Contraseña"
+                       th:classappend="${#fields.hasErrors('contrasena')} ? 'is-invalid'">
+
+                <div class="error" th:if="${#fields.hasErrors('contrasena')}"
+                     th:errors="*{contrasena}"></div>
+
 
                 <button type="submit">Ingresar</button>
 
