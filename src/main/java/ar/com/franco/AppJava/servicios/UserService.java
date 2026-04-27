@@ -28,5 +28,8 @@ public class UserService {
         return repository.findAll();
     }
     
+    public Usuario buscarPorUsuario(String usuario) {
+        return repository.findByUsuario(usuario);
+    }
 
 }
