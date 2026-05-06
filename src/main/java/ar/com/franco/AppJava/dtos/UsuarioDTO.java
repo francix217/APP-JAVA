@@ -1,9 +1,12 @@
 package ar.com.franco.AppJava.dtos;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UsuarioDTO {
 	
+	@JsonProperty(value = "name")
     private String usuario;
+	@JsonProperty(value = "status")
     private String rol;
     
     
