@@ -3,6 +3,7 @@ package ar.com.franco.AppJava.servicios;
 import java.util.List;
 import java.util.Optional;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +15,8 @@ public class UserService {
 
     @Autowired
     private UserRepository repository;
+    
+    private ModelMapper mapper = new ModelMapper();
 
     public Usuario obtener(Long id) {
         Optional<Usuario> user = repository.findById(id);
