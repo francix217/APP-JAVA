@@ -6,9 +6,12 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import ar.com.franco.AppJava.domain.Usuario;
+import ar.com.franco.AppJava.form.UserForm;
 import ar.com.franco.AppJava.servicios.UserService;
 
 @RestController
@@ -26,5 +29,16 @@ public class UserAPIResetService {
 
         return ResponseEntity.ok(usuarios);
     }
+	
+	@PostMapping(value = "/api/users/save",
+	        consumes = MediaType.APPLICATION_JSON_VALUE,
+	        produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<String> save(@RequestBody UserForm formulario) {
+		
+		formulario.getUsuario();
+		formulario.getRol();
+
+	    return ResponseEntity.ok("Todo OK");
+	}
 	
 }
