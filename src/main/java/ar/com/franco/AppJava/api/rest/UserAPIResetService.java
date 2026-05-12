@@ -17,11 +17,12 @@ import ar.com.franco.AppJava.servicios.UserService;
 
 @RestController
 public class UserAPIResetService {
-	
+	public static final String URL_PATH = "/api";
+	public static final String API_USERS_URL_PATH = URL_PATH + "/users";
 	@Autowired
 	UserService service;
 	
-	@GetMapping(value = "api/users",
+	@GetMapping(value = API_USERS_URL_PATH,
 			consumes = MediaType.APPLICATION_JSON_VALUE,
 			produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<UsuarioDTO>> list() {
