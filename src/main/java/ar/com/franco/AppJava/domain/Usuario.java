@@ -1,12 +1,18 @@
 package ar.com.franco.AppJava.domain;
 
+import java.util.List;
+
 import ar.com.franco.AppJava.emuns.Genero;
+import ar.com.franco.AppJava.emuns.Permiso;
+import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Table;
 
 @Entity
@@ -32,6 +38,12 @@ public class Usuario extends Persisteble{
 	
 	//private static final int cantMinCaracterContrasena = 5;
 	//private static final int cantMaxCaracterContrasena = 70;
+	
+	@Enumerated(EnumType.ORDINAL)
+	@ElementCollection(targetClass = Permiso.class)
+	@CollectionTable(name = "PERMISOS_USUARIOS", joinColumns = @JoinColumn(name = "USUARIO_ID"))
+	@Column(name = "PERMISO_ID")
+	private List<Permiso> permisos;
 	
 	public Usuario() {
 	}
