@@ -26,8 +26,8 @@ public class Usuario extends Persisteble{
 	@Column(name = "contrasena")
 	private String contrasena;
 	
-    @Enumerated(EnumType.STRING)
-    @Column(name = "genero")
+    @Enumerated(EnumType.ORDINAL)
+    @Column(name = "ID_GENERO")
     private Genero genero;
 
     @Column(name = "rol")

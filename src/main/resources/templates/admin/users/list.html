@@ -15,8 +15,6 @@
         <thead>
             <tr>
                 <th>Usuario</th>
-                <th>Contraseña</th>
-                <th>Genero</th>
                 <th>Rol</th>
             </tr>
         </thead>
@@ -24,8 +22,6 @@
         <tbody>
             <tr th:each="usuario : ${listado}">
                 <td th:text="${usuario.usuario}"></td>
-                <td th:text="${usuario.contrasena}"></td>
-                <td th:text="${usuario.genero}"></td>
                 <td th:text="${usuario.rol}"></td>              
             </tr>
         </tbody>
