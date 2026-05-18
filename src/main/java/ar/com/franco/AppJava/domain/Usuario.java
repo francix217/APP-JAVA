@@ -14,6 +14,10 @@ import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Table;
+import java.util.Collection;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 @Entity
 @Table(name = "USUARIO")
@@ -101,19 +105,10 @@ public class Usuario extends Persisteble{
 	
 	
 	
+    public Collection<? extends GrantedAuthority> collectAuthorities() {
+        return List.of(new SimpleGrantedAuthority("ROLE_" + this.rol));
+    }
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
 	
 	
 }
