@@ -75,7 +75,7 @@ public class Login {
     }
   
 
-    
+    /*
     @PostMapping("/signIn")
     public String signIn(@Validated @ModelAttribute(name = FORM_ATTRIBUTE) LoginForm formulario, BindingResult resultado){
     		
@@ -88,5 +88,6 @@ public class Login {
     	
     	return "/home";
 }
+*/
     
 }

@@ -6,6 +6,8 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.SecurityFilterChain;
 
+import ar.com.franco.AppJava.emuns.Permiso;
+
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
@@ -13,7 +15,9 @@ public class SecurityConfig {
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity htpp) throws Exception{
 		
-		return htpp.authorizeHttpRequests(auth -> auth.anyRequest().permitAll()).build();
+		return htpp.authorizeHttpRequests(auth -> auth.requestMatchers("/sec/**").hasAnyRole(Permiso.ADMIN.name(), Permiso.USER.name())
+														.requestMatchers("/sec/admin/**").hasAnyRole(Permiso.ADMIN.name())
+														.anyRequest().permitAll()).build();
 		
 	}
 	
