@@ -13,22 +13,22 @@
 
             <h2>🔐 Iniciar Sesión</h2>
 
-            <form th:action="@{/login}" method="post" th:object="${form}">
+            <form th:action="@{/signIn}" method="post" th:object="${form}">
 
                 <!-- USUARIO -->
-                <input type="text" th:field="*{usuario}" placeholder="Usuario"
-                       th:classappend="${#fields.hasErrors('usuario')} ? 'is-invalid'">
+                <input type="text" th:field="*{username}" placeholder="Usuario"
+                       th:classappend="${#fields.hasErrors('username')} ? 'is-invalid'">
 
-                <div class="error" th:if="${#fields.hasErrors('usuario')}"
-                     th:errors="*{usuario}"></div>
+                <div class="error" th:if="${#fields.hasErrors('username')}"
+                     th:errors="*{username}"></div>
 
 
                 <!-- PASSWORD -->
-                <input type="password" th:field="*{contrasena}" placeholder="Contraseña"
-                       th:classappend="${#fields.hasErrors('contrasena')} ? 'is-invalid'">
+                <input type="password" th:field="*{password}" placeholder="Contraseña"
+                       th:classappend="${#fields.hasErrors('password')} ? 'is-invalid'">
 
-                <div class="error" th:if="${#fields.hasErrors('contrasena')}"
-                     th:errors="*{contrasena}"></div>
+                <div class="error" th:if="${#fields.hasErrors('password')}"
+                     th:errors="*{password}"></div>
 
 
                 <button type="submit">Ingresar</button>

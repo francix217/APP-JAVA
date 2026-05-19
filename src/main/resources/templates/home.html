@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layout}">
-
+      
 <body>
 
 <div layout:fragment="content">
@@ -18,13 +18,26 @@
                     <button class="principal">🏋️ Ver Productos</button>
                 </a>
 
-                <a th:href="@{/login}">
-                    <button>🔐 Iniciar Sesión</button>
-                </a>
+                <div class="botones">
+                    <a th:href="@{/login}">
+                        <button>🔐 Iniciar Sesión</button>
+                    </a>
+                    
+                </div>
+                
+                <div class="botones">
+                    <a th:href="@{/registro}">
+                        <button>📝 Registrarse</button>
+                    </a>
+                </div>
 
-                <a th:href="@{/registro}">
-    				<button>📝 Registrarse</button>
-				</a>
+                <!-- ADMIN SOLO SI ES ADMIN -->
+                <div sec:authorize="hasRole('ROLE_ADMIN')">
+                    <a th:href="@{/admin}">
+                        <button>⚙️ Panel Admin</button>
+                    </a>
+                </div>
+
                 
             </div>
         </div>

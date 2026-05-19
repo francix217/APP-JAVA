@@ -14,6 +14,8 @@ import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Table;
+
+import java.util.ArrayList;
 import java.util.Collection;
 
 import org.springframework.security.core.GrantedAuthority;
@@ -105,8 +107,14 @@ public class Usuario extends Persisteble{
 	
 	
 	
-    public Collection<? extends GrantedAuthority> collectAuthorities() {
-        return List.of(new SimpleGrantedAuthority("ROLE_" + this.rol));
+    public List<GrantedAuthority> collectAuthorities() {
+        List<GrantedAuthority> credentials = new ArrayList<GrantedAuthority>();
+        
+        for (Permiso permiso : this.permisos) {
+            credentials.add(new SimpleGrantedAuthority(permiso.securityName()));
+        }
+        
+        return credentials;
     }
 	
 	
