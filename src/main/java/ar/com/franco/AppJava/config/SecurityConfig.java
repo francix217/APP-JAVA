@@ -1,18 +1,24 @@
 package ar.com.franco.AppJava.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
+import ar.com.codigomariano.config.filters.JWTAuthorizationFilter;
 import ar.com.franco.AppJava.api.rest.LoginAPIRestService;
 import ar.com.franco.AppJava.emuns.Permiso;
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
+	
+	@Autowired
+	private JWTAuthorizationFilter jwtFilter;
 		
 	@Bean
 	public SecurityFilterChain apiFilterChain(HttpSecurity htpp) throws Exception{
@@ -23,6 +29,7 @@ public class SecurityConfig {
 					.requestMatchers(LoginAPIRestService.API_LOGIN_URL).permitAll()
 					.anyRequest().authenticated())
 			.csrf(csrf -> csrf.disable())
+			.addFilterAfter(this.jwtFilter, BasicAuthenticationFilter.class)
 			.build();
 	}
 	
