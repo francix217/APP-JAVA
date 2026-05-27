@@ -6,31 +6,28 @@
 
 <div th:fragment="navbar" class="navbar">
 
-    <!-- LOGO -->
-    <div class="logo">
-        <h2>🏋️ GymTech</h2>
+    <!-- IZQUIERDA -->
+    <div class="nav-left">
+
+        <div class="logo">
+            <h2>🏋️ GymTech</h2>
+        </div>
+
+        <div class="links">
+            <a th:href="@{/}">Inicio</a>
+            <a th:href="@{/verProductos}">Productos</a>
+            <a th:href="@{/registro}">Registro</a>
+        </div>
+
     </div>
 
-    <!-- LINKS -->
-    <div class="nav-links">
+    <!-- DERECHA -->
+    <div class="nav-right">
 
-        <a th:href="@{/}">
-            Inicio
-        </a>
-
-        <a th:href="@{/login}">
-            Login
-        </a>
-
-        <a th:href="@{/registro}">
-            Registro
-        </a>
-
-        <!-- DROPDOWN -->
         <div class="dropdown">
 
             <button class="dropbtn">
-                Sesión ▼
+                ⚙ Cuenta ▼
             </button>
 
             <div class="dropdown-content">
@@ -40,11 +37,9 @@
                 </a>
 
                 <form th:action="@{/logout}" method="post">
-
                     <button type="submit" class="logout-item">
                         Logout
                     </button>
-
                 </form>
 
             </div>
@@ -56,5 +51,4 @@
 </div>
 
 </body>
-</html>
 </html>
