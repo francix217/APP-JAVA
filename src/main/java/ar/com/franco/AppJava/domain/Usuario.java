@@ -1,6 +1,10 @@
 package ar.com.franco.AppJava.domain;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import ar.com.franco.AppJava.emuns.Genero;
 import ar.com.franco.AppJava.emuns.Permiso;
@@ -14,12 +18,6 @@ import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Table;
-
-import java.util.ArrayList;
-import java.util.Collection;
-
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 @Entity
 @Table(name = "USUARIO")
