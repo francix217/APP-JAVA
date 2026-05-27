@@ -1,17 +1,60 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
 <body>
 
-<div th:fragment="navbar">
-    <h2>🏋️ GymTech</h2>
+<div th:fragment="navbar" class="navbar">
 
-    <a th:href="@{/}">Inicio</a> |
-    <a th:href="@{/verProductos}">Productos</a> |
-    <a th:href="@{/login}">Login</a>
-    <a th:href="@{/adm/users}" class="admin-link">Admin</a>
+    <!-- LOGO -->
+    <div class="logo">
+        <h2>🏋️ GymTech</h2>
+    </div>
 
-    <hr>
+    <!-- LINKS -->
+    <div class="nav-links">
+
+        <a th:href="@{/}">
+            Inicio
+        </a>
+
+        <a th:href="@{/login}">
+            Login
+        </a>
+
+        <a th:href="@{/registro}">
+            Registro
+        </a>
+
+        <!-- DROPDOWN -->
+        <div class="dropdown">
+
+            <button class="dropbtn">
+                Sesión ▼
+            </button>
+
+            <div class="dropdown-content">
+
+                <a th:href="@{/adm/users}">
+                    Admin
+                </a>
+
+                <form th:action="@{/logout}" method="post">
+
+                    <button type="submit" class="logout-item">
+                        Logout
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </div>
 
 </body>
+</html>
 </html>
