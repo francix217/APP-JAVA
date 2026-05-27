@@ -1,8 +1,10 @@
 package ar.com.franco.AppJava.servicios;
 
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
@@ -22,12 +24,25 @@ public class JWTServiceImp implements JWTService {
 	private final String KEY_AUTHORIZATION = "authorization";
 	private final String KEY_USERNAME = "Username";
 	
+	@Value("${jwt.secret.password}")
+	private String secretPassword;
+	
 	@Override
 	public String buildToken(Usuario usuario) {
 		
 		return JWT.create().withKeyId("My-App-" + usuario.getUsuario())
+					.withExpiresAt(Instant.now().plusSeconds(180))
 					.withClaim(KEY_AUTHORIZATION, obtenerPermisosUsuarios(usuario))
-					.sign(Algorithm.HMAC512("my-secret-password"));
+					.sign(Algorithm.HMAC512(this.secretPassword));
+	}
+	
+	@Override
+	public boolean isValidToken(String token) {
+		DecodedJWT decodedToken = JWT.decode(token);
+		
+		Instant instant = decodedToken.getExpiresAtAsInstant();
+		
+		return Instant.now().isBefore(instant);
 	}
 	
 	@Override
@@ -63,5 +78,5 @@ public class JWTServiceImp implements JWTService {
 
 	    return authorities;
 	}
-	
+
 }

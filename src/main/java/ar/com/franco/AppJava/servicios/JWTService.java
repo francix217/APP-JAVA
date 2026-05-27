@@ -10,6 +10,8 @@ public interface JWTService {
 	
 	public String buildToken(Usuario usuario);
 	
+	public boolean isValidToken(String token);
+	
 	Authentication buildAuthentication(String token);
 	
 }
