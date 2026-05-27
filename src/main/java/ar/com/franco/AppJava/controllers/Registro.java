@@ -34,7 +34,7 @@ public class Registro {
         return "registro/registro";
     }
 
-    @PostMapping("/registro")
+    @PostMapping("/singup")
     public String registrar(@Validated @ModelAttribute("form") UserForm form, BindingResult result) {
 
 

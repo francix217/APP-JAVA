@@ -46,7 +46,7 @@ public class Login {
     @GetMapping(LOGIN_URL)
     public String login(Model model) {
         model.addAttribute(FORM_ATTRIBUTE, new LoginForm());
-        return "unsecured/login";
+        return "/login/login";
     }
 
     @PostMapping("/signIn")
@@ -71,7 +71,7 @@ public class Login {
                 contexto
         );
         
-        return "redirect:/home";
+        return "redirect:/verProductos";
     }
   
 
