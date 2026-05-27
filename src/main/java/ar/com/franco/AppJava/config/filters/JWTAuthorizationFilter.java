@@ -1,4 +1,4 @@
-package ar.com.codigomariano.config.filters;
+package ar.com.franco.AppJava.config.filters;
 
 import java.io.IOException;
 
@@ -57,6 +57,11 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
 		return segmentos[1];
 	}
 	
+	
+	private boolean isValidToken(String token) {
+		
+		return this.jwtService.isValidToken(token);
+	}
 	
 
 }

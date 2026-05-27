@@ -9,8 +9,8 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
-import ar.com.codigomariano.config.filters.JWTAuthorizationFilter;
 import ar.com.franco.AppJava.api.rest.LoginAPIRestService;
+import ar.com.franco.AppJava.config.filters.JWTAuthorizationFilter;
 import ar.com.franco.AppJava.emuns.Permiso;
 
 @Configuration
