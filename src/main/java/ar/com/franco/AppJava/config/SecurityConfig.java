@@ -18,7 +18,7 @@ public class SecurityConfig {
 		htpp.formLogin(page -> page.loginPage("/login"));
 		
 		return htpp.authorizeHttpRequests(auth -> auth.requestMatchers("/sec/**").hasAnyRole(Permiso.ADMIN.name(), Permiso.USER.name())
-														.requestMatchers("/sec/amin/**").hasAnyRole(Permiso.ADMIN.name())
+														.requestMatchers("/sec/admin/**").hasAnyRole(Permiso.ADMIN.name())
 														.requestMatchers("/adm/**").hasAnyRole(Permiso.ADMIN.name())
 														.requestMatchers("/registro","/singup").permitAll()
 														.anyRequest().permitAll()).build();
