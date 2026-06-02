@@ -34,192 +34,61 @@ body::before{
 /* NAVBAR */
 /* ========================= */
 
-.navbar {
-
-    width: 100%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 15px 40px;
-
-    background: rgba(0,0,0,0.92);
-
-    position: fixed;
-
-    top: 0;
-    left: 0;
-
-    z-index: 9999;
-
-    overflow: visible;
-
-    border-bottom: 1px solid rgba(0,240,255,0.2);
-
-    box-sizing: border-box;
+.container-fluid{
+    display:flex;
+    align-items:center;
+    width:100%;
 }
 
-/* IZQUIERDA */
-
-.nav-left {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 40px;
+.ms-auto{
+    margin-left:auto !important;
 }
 
-/* LOGO */
-
-.logo h2 {
-
-    color: white;
-
-    margin: 0;
-
-    font-size: 28px;
+.navbar{
+    background:#0a0a0a !important;
+    border-bottom:2px solid #00f0ff;
+    box-shadow:0 0 15px rgba(0,240,255,.4);
+    padding:12px 25px;
 }
 
-/* LINKS */
-
-.links {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 25px;
+.navbar-brand{
+    color:#00f0ff !important;
+    font-weight:bold;
+    font-size:1.5rem;
 }
 
-.links a {
-
-    color: #00f0ff;
-
-    text-decoration: none;
-
-    font-weight: bold;
-
-    transition: 0.3s;
+.nav-link{
+    color:white !important;
+    font-weight:bold;
+    margin-left:10px;
 }
 
-.links a:hover {
-
-    color: white;
-
-    text-shadow: 0 0 10px #00f0ff;
+.nav-link:hover{
+    color:#00f0ff !important;
 }
 
-/* DERECHA */
-
-.nav-right {
-
-    display: flex;
-
-    align-items: center;
+.btn-outline-info{
+    border:2px solid #00f0ff;
+    color:#00f0ff;
 }
 
-/* ========================= */
-/* DROPDOWN */
-/* ========================= */
-
-.dropdown {
-
-    position: relative;
+.btn-outline-info:hover{
+    background:#00f0ff;
+    color:black;
 }
 
-/* BOTON */
-
-.dropbtn {
-
-    background: none;
-
-    border: none;
-
-    color: #00f0ff;
-
-    font-weight: bold;
-
-    font-size: 15px;
-
-    cursor: pointer;
-
-    transition: 0.3s;
+.dropdown-menu{
+    background:#121212;
+    border:1px solid #00f0ff;
 }
 
-.dropbtn:hover {
-
-    color: white;
+.dropdown-item{
+    color:white;
 }
 
-/* CONTENIDO */
-
-.dropdown-content {
-
-    display: none;
-
-    position: absolute;
-
-    top: 35px;
-    right: 0;
-
-    background: #111;
-
-    min-width: 180px;
-
-    border-radius: 12px;
-
-    overflow: hidden;
-
-    box-shadow: 0 0 15px rgba(0,240,255,0.2);
-
-    z-index: 10000;
-}
-
-/* ITEMS */
-
-.dropdown-content a,
-.logout-item {
-
-    display: block;
-
-    width: 100%;
-
-    padding: 14px;
-
-    background: none;
-
-    border: none;
-
-    color: white;
-
-    text-align: left;
-
-    text-decoration: none;
-
-    cursor: pointer;
-
-    font-size: 14px;
-
-    transition: 0.3s;
-
-    box-sizing: border-box;
-}
-
-.dropdown-content a:hover,
-.logout-item:hover {
-
-    background: #00f0ff;
-
-    color: black;
-}
-
-/* MOSTRAR DROPDOWN */
-
-.dropdown:hover .dropdown-content {
-
-    display: block;
+.dropdown-item:hover{
+    background:#00f0ff;
+    color:black;
 }
 
 /* HERO */
