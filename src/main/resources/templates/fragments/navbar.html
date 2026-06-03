@@ -35,7 +35,7 @@
 
                     <ul class="dropdown-menu dropdown-menu-end">
 
-                        <li>
+                        <li sec:authorize="hasRole('ROLE_ADMIN')">
                             <a class="dropdown-item"
                                th:href="@{/adm/users}">
                                 Admin
@@ -47,12 +47,10 @@
                         </li>
 
                         <li>
-                            <form th:action="@{/logout}" method="post">
-                                <button type="submit"
-                                        class="dropdown-item">
+                              <a class="dropdown-item"
+                              	th:href="@{/logout}">
                                     Logout
-                                </button>
-                            </form>
+                                </a>
                         </li>
 
                     </ul>

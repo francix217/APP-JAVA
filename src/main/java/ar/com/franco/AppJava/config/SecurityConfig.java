@@ -36,7 +36,7 @@ public class SecurityConfig {
 	@Bean
 	public SecurityFilterChain webFilterChain(HttpSecurity htpp) throws Exception{
 		
-		return htpp.securityMatcher("/web/**")
+		return htpp.securityMatcher("/**")
 			.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED))
 			.authorizeHttpRequests(auth -> auth.requestMatchers("/sec/**").hasAnyRole(Permiso.ADMIN.name(), Permiso.USER.name())
 					.requestMatchers("/sec/admin/**").hasAnyRole(Permiso.ADMIN.name())
