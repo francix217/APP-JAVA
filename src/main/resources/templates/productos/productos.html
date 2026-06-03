@@ -7,23 +7,215 @@
 
 <div layout:fragment="content">
 
-    <div class="contenedor-productos">
+<div class="container py-5">
 
-        <div class="card">
-            <div class="imagen press"></div>
-            <h3>Press Banca</h3>
-            <p>Precio: $150000</p>
-            <p>Stock: 3</p>
+    <div class="productos-header">
+
+        <h1>🏋️ Equipamiento Profesional GymTech</h1>
+
+        <p class="subtitulo">
+            Tecnología, fuerza y rendimiento para alcanzar tu mejor versión.
+        </p>
+
+        <p class="frase-motivacional">
+            "El éxito no llega por motivación. Llega por disciplina."
+        </p>
+
+    </div>
+
+    <!-- MUSCULACION -->
+
+    <h2 class="categoria-titulo">🏋️ Musculación</h2>
+
+    <div class="accordion mb-5" id="musculacion">
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#press">
+                    Press de Banca - $150.000
+                </button>
+            </h2>
+            <div id="press" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    Banco reforzado para entrenamientos de pecho,
+                    hombros y tríceps. Diseñado para soportar cargas
+                    elevadas con máxima estabilidad y seguridad.
+
+                    <button class="btn btn-success mt-3"
+                            onclick="alert('Compra realizada correctamente')">
+                        Comprar
+                    </button>
+                </div>
+            </div>
         </div>
 
-        <div class="card">
-            <div class="imagen mancuernas"></div>
-            <h3>Set de Mancuernas</h3>
-            <p>Precio: $80000</p>
-            <p>Stock: 10</p>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#barra">
+                    ⚡ Barra Olímpica - $120.000
+                </button>
+            </h2>
+            <div id="barra" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    Barra profesional para levantamiento olímpico,
+                    ideal para fuerza, potencia y entrenamiento avanzado.
+
+                    <button class="btn btn-success mt-3"
+                            onclick="alert('Compra realizada correctamente')">
+                        Comprar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#rack">
+                    🏆 Rack de Sentadillas - $320.000
+                </button>
+            </h2>
+            <div id="rack" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    Estructura profesional para sentadillas, press militar
+                    y entrenamiento de fuerza con máxima seguridad.
+
+                    <button class="btn btn-success mt-3"
+                            onclick="alert('Compra realizada correctamente')">
+                        Comprar
+                    </button>
+                </div>
+            </div>
         </div>
 
     </div>
+
+    <!-- CARDIO -->
+
+    <h2 class="categoria-titulo">🏃 Cardio</h2>
+
+    <div class="accordion mb-5" id="cardio">
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#cinta">
+                    🏃 Cinta de Correr - $450.000
+                </button>
+            </h2>
+            <div id="cinta" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    Equipo profesional con velocidad regulable,
+                    inclinación automática y monitoreo cardíaco.
+
+                    <button class="btn btn-success mt-3"
+                            onclick="alert('Compra realizada correctamente')">
+                        Comprar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#bici">
+                    🚴 Bicicleta Fija - $280.000
+                </button>
+            </h2>
+            <div id="bici" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    Ideal para mejorar resistencia cardiovascular y
+                    fortalecer piernas con entrenamiento de bajo impacto.
+
+                    <button class="btn btn-success mt-3"
+                            onclick="alert('Compra realizada correctamente')">
+                        Comprar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FUNCIONAL -->
+
+    <h2 class="categoria-titulo">💪 Entrenamiento Funcional</h2>
+
+    <div class="accordion mb-5" id="funcional">
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#kettlebell">
+                    💪 Kettlebell 16kg - $45.000
+                </button>
+            </h2>
+            <div id="kettlebell" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    Excelente para ejercicios explosivos,
+                    fuerza funcional y acondicionamiento físico.
+
+                    <button class="btn btn-success mt-3"
+                            onclick="alert('Compra realizada correctamente')">
+                        Comprar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MAQUINAS -->
+
+    <h2 class="categoria-titulo">⚙️ Máquinas Profesionales</h2>
+
+    <div class="accordion mb-5" id="maquinas">
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#polea">
+                    ⚙️ Máquina Polea Multifunción - $650.000
+                </button>
+            </h2>
+            <div id="polea" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    Estación completa para entrenar todos los grupos
+                    musculares mediante múltiples configuraciones.
+
+                    <button class="btn btn-success mt-3"
+                            onclick="alert('Compra realizada correctamente')">
+                        Comprar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mensaje-final">
+
+        <h3>🔥 Transformá tu entrenamiento</h3>
+
+        <p>
+            En GymTech ofrecemos equipamiento diseñado para ayudarte
+            a alcanzar tus objetivos físicos con calidad profesional,
+            seguridad y máximo rendimiento.
+        </p>
+
+    </div>
+
+</div>
 
 </div>
 

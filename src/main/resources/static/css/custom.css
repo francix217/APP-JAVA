@@ -352,78 +352,90 @@ body::before{
 }
 
 /* ========================= */
-/* PRODUCTOS */
+/* PRODUCTOS PROFESIONAL */
 /* ========================= */
 
-.contenedor-productos{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    justify-content:center;
-
-    gap:25px;
-
-    margin-top:40px;
-}
-
-/* CARD */
-
-.card{
-
-    width:250px;
-
-    background:rgba(255,255,255,0.95);
-
-    color:black;
-
-    border-radius:15px;
-
-    padding:15px;
-
+.productos-header{
     text-align:center;
-
-    box-shadow:0 5px 15px rgba(0,0,0,0.3);
-
-    transition:0.3s;
+    margin-bottom:50px;
 }
 
-/* HOVER */
-
-.card:hover{
-
-    transform:
-        translateY(-10px)
-        scale(1.05);
-
-    box-shadow:
-        0 15px 30px rgba(0,0,0,0.6);
+.productos-header h1{
+    color:#00f0ff;
+    font-size:3rem;
+    font-weight:bold;
 }
 
-/* IMAGEN */
-
-.imagen{
-
-    width:100%;
-    height:160px;
-
-    border-radius:10px;
-
-    margin-bottom:10px;
-
-    background-size:cover;
-    background-position:center;
+.subtitulo{
+    color:#dcdcdc;
+    font-size:1.2rem;
 }
 
-/* IMAGENES */
-
-.press{
-    background-image:url('../images/press-banca.jpg');
+.frase-motivacional{
+    color:#ff7b00;
+    font-style:italic;
+    margin-top:15px;
+    font-size:1.1rem;
 }
 
-.mancuernas{
-    background-image:url('../images/mancuernas.jpg');
+.categoria-titulo{
+    color:#00f0ff;
+    margin-bottom:20px;
+    margin-top:40px;
+    font-weight:bold;
+}
+
+.accordion-item{
+    background:#111 !important;
+    border:1px solid #222;
+}
+
+.accordion-button{
+    background:#111 !important;
+    color:white !important;
+    font-weight:bold;
+}
+
+.accordion-button:not(.collapsed){
+    background:#151515 !important;
+    color:#00f0ff !important;
+}
+
+.accordion-button:focus{
+    box-shadow:none;
+}
+
+.accordion-body{
+    background:#0f0f0f;
+    color:#dcdcdc;
+}
+
+.btn-success{
+    background:#00c853;
+    border:none;
+}
+
+.btn-success:hover{
+    background:#00e676;
+}
+
+.mensaje-final{
+    text-align:center;
+    margin-top:70px;
+    padding:40px;
+    border-top:1px solid #333;
+}
+
+.mensaje-final h3{
+    color:#ff7b00;
+    margin-bottom:15px;
+}
+
+.mensaje-final p{
+    color:#ccc;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
 }
 
 /* ========================= */
