@@ -352,89 +352,197 @@ body::before{
 }
 
 /* ========================= */
-/* PRODUCTOS PROFESIONAL */
+/* PRODUCTOS GYMTECH */
 /* ========================= */
 
-.productos-header{
+.titulo-principal{
     text-align:center;
-    margin-bottom:50px;
-}
-
-.productos-header h1{
-    color:#00f0ff;
+    color:#00e5ff;
     font-size:3rem;
-    font-weight:bold;
+    font-weight:700;
+    margin-bottom:10px;
 }
 
-.subtitulo{
-    color:#dcdcdc;
-    font-size:1.2rem;
+.container{
+    max-width:1400px;
 }
 
-.frase-motivacional{
-    color:#ff7b00;
-    font-style:italic;
-    margin-top:15px;
-    font-size:1.1rem;
+#buscador,
+#filtroCategoria{
+    background:#111827;
+    border:1px solid #00e5ff50;
+    color:white;
+    border-radius:10px;
 }
 
-.categoria-titulo{
-    color:#00f0ff;
-    margin-bottom:20px;
-    margin-top:40px;
-    font-weight:bold;
-}
-
-.accordion-item{
-    background:#111 !important;
-    border:1px solid #222;
-}
-
-.accordion-button{
-    background:#111 !important;
-    color:white !important;
-    font-weight:bold;
-}
-
-.accordion-button:not(.collapsed){
-    background:#151515 !important;
-    color:#00f0ff !important;
-}
-
-.accordion-button:focus{
-    box-shadow:none;
-}
-
-.accordion-body{
-    background:#0f0f0f;
-    color:#dcdcdc;
-}
-
-.btn-success{
-    background:#00c853;
-    border:none;
-}
-
-.btn-success:hover{
-    background:#00e676;
-}
-
-.mensaje-final{
-    text-align:center;
-    margin-top:70px;
-    padding:40px;
-    border-top:1px solid #333;
-}
-
-.mensaje-final h3{
-    color:#ff7b00;
+#buscador{
     margin-bottom:15px;
 }
 
-.mensaje-final p{
-    color:#ccc;
-    max-width:700px;
-    margin:auto;
+.categoria{
+    background:rgba(8,15,35,.85);
+    border:1px solid #00e5ff40;
+    border-radius:15px;
+    margin-bottom:25px;
+    overflow:hidden;
+}
+
+.categoria h2{
+    color:#00e5ff;
+    margin:0;
+    padding:20px;
+    border-bottom:1px solid rgba(0,229,255,.15);
+    font-size:2rem;
+}
+
+.producto{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+
+    padding:20px 25px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    background:transparent;
+
+    transition:.3s;
+}
+
+.producto:last-child{
+    border-bottom:none;
+}
+
+.producto:hover{
+    background:rgba(0,229,255,.05);
+}
+
+.producto h5{
+    color:white;
+    font-size:1.2rem;
+    margin-bottom:5px;
+}
+
+.producto p{
+    color:#b8c2cc;
+    margin:0;
+}
+
+.producto-info{
+    flex:1;
+}
+
+.precio{
+    color:#00e5ff;
+    font-size:1.4rem;
+    font-weight:bold;
+    min-width:180px;
+    text-align:center;
+}
+
+.stock{
+    color:#2ecc71;
+    font-weight:bold;
+    min-width:150px;
+    text-align:center;
+}
+
+.btn-comprar{
+    background:transparent;
+    border:2px solid #00e5ff;
+    color:#00e5ff;
+
+    padding:10px 25px;
+    border-radius:10px;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.btn-comprar:hover{
+    background:#00e5ff;
+    color:#000;
+}
+
+.btn-rutina{
+    background:transparent;
+    border:2px solid #ff9800;
+    color:#ff9800;
+
+    padding:10px 25px;
+    border-radius:10px;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.btn-rutina:hover{
+    background:#ff9800;
+    color:#000;
+}
+
+/* BENEFICIOS */
+
+.beneficios{
+    margin-top:50px;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+}
+
+.beneficio{
+    background:rgba(8,15,35,.85);
+
+    border:1px solid rgba(0,229,255,.2);
+
+    border-radius:15px;
+
+    text-align:center;
+
+    padding:25px;
+}
+
+.beneficio h4{
+    color:#00e5ff;
+}
+
+.beneficio p{
+    color:#c9d1d9;
+}
+
+@media(max-width:900px){
+
+    .producto{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .beneficios{
+        grid-template-columns:1fr;
+    }
+
+}
+
+.hero-text{
+    text-align:center;
+    max-width:900px;
+    margin:0 auto 50px auto;
+}
+
+.hero-text h3{
+    color:#ffffff;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.hero-text p{
+    color:#b8c2cc;
+    font-size:1.1rem;
     line-height:1.8;
 }
 

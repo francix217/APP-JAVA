@@ -3,221 +3,216 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layout}">
 
-<body>
-
 <div layout:fragment="content">
 
-<div class="container py-5">
+    <div class="container mt-5">
 
-    <div class="productos-header">
+        <h1 class="titulo-principal">
+            🏋️ GymTech Store
+        </h1>
 
-        <h1>🏋️ Equipamiento Profesional GymTech</h1>
+<div class="hero-text">
 
-        <p class="subtitulo">
-            Tecnología, fuerza y rendimiento para alcanzar tu mejor versión.
-        </p>
+    <h3>
+        Potenciá tu rendimiento con tecnología de entrenamiento profesional
+    </h3>
 
-        <p class="frase-motivacional">
-            "El éxito no llega por motivación. Llega por disciplina."
-        </p>
+    <p>
+        Descubrí equipamiento de última generación, máquinas de alto rendimiento
+        y programas de entrenamiento diseñados para desarrollar fuerza,
+        hipertrofia, resistencia y acondicionamiento físico de manera eficiente.
+    </p>
 
-    </div>
+</div>
 
-    <!-- MUSCULACION -->
+        <!-- MUSCULACION -->
 
-    <h2 class="categoria-titulo">🏋️ Musculación</h2>
+        <div class="categoria">
 
-    <div class="accordion mb-5" id="musculacion">
+            <h2>🏋️ Musculación</h2>
 
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#press">
-                    Press de Banca - $150.000
-                </button>
-            </h2>
-            <div id="press" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    Banco reforzado para entrenamientos de pecho,
-                    hombros y tríceps. Diseñado para soportar cargas
-                    elevadas con máxima estabilidad y seguridad.
-
-                    <button class="btn btn-success mt-3"
-                            onclick="alert('Compra realizada correctamente')">
-                        Comprar
-                    </button>
+            <div class="producto">
+                <div class="producto-info">
+                    <h5>Press de Banca Profesional</h5>
+                    <p>Banco reforzado para entrenamiento de fuerza y potencia.</p>
                 </div>
+                <div class="stock">🟢 Stock</div>
+                <div class="precio">$380.000</div>
+                <button class="btn-comprar">Comprar</button>
             </div>
+
+            <div class="producto">
+                <div class="producto-info">
+                    <h5>Barra Olímpica 20kg</h5>
+                    <p>Barra certificada para levantamientos de alta exigencia.</p>
+                </div>
+                <div class="stock">🟢 Stock</div>
+                <div class="precio">$290.000</div>
+                <button class="btn-comprar">Comprar</button>
+            </div>
+
+            <div class="producto">
+                <div class="producto-info">
+                    <h5>Power Rack Profesional</h5>
+                    <p>Jaula de potencia para entrenamientos completos.</p>
+                </div>
+                <div class="stock">🟢 Stock</div>
+                <div class="precio">$1.450.000</div>
+                <button class="btn-comprar">Comprar</button>
+            </div>
+
         </div>
 
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#barra">
-                    ⚡ Barra Olímpica - $120.000
-                </button>
-            </h2>
-            <div id="barra" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    Barra profesional para levantamiento olímpico,
-                    ideal para fuerza, potencia y entrenamiento avanzado.
+        <!-- CARDIO -->
 
-                    <button class="btn btn-success mt-3"
-                            onclick="alert('Compra realizada correctamente')">
-                        Comprar
-                    </button>
+        <div class="categoria">
+
+            <h2>🏃 Cardio</h2>
+
+            <div class="producto">
+                <div class="producto-info">
+                    <h5>Cinta Profesional</h5>
+                    <p>Sistema de amortiguación multicapa y monitoreo avanzado.</p>
                 </div>
+                <div class="stock">🟢 Stock</div>
+                <div class="precio">$2.300.000</div>
+                <button class="btn-comprar">Comprar</button>
             </div>
+
+            <div class="producto">
+                <div class="producto-info">
+                    <h5>Air Bike</h5>
+                    <p>Ideal para entrenamientos HIIT y acondicionamiento físico.</p>
+                </div>
+                <div class="stock">🟢 Stock</div>
+                <div class="precio">$1.150.000</div>
+                <button class="btn-comprar">Comprar</button>
+            </div>
+
         </div>
 
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#rack">
-                    🏆 Rack de Sentadillas - $320.000
-                </button>
-            </h2>
-            <div id="rack" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    Estructura profesional para sentadillas, press militar
-                    y entrenamiento de fuerza con máxima seguridad.
+        <!-- FUNCIONAL -->
 
-                    <button class="btn btn-success mt-3"
-                            onclick="alert('Compra realizada correctamente')">
-                        Comprar
-                    </button>
+        <div class="categoria">
+
+            <h2>💪 Entrenamiento Funcional</h2>
+
+            <div class="producto">
+                <div class="producto-info">
+                    <h5>Kettlebell 16kg</h5>
+                    <p>Mejora potencia, coordinación y estabilidad dinámica.</p>
                 </div>
+                <div class="stock">🟢 Stock</div>
+                <div class="precio">$75.000</div>
+                <button class="btn-comprar">Comprar</button>
             </div>
+
+            <div class="producto">
+                <div class="producto-info">
+                    <h5>Battle Rope</h5>
+                    <p>Entrenamiento metabólico y resistencia muscular.</p>
+                </div>
+                <div class="stock">🟢 Stock</div>
+                <div class="precio">$160.000</div>
+                <button class="btn-comprar">Comprar</button>
+            </div>
+
         </div>
 
-    </div>
+        <!-- MAQUINAS -->
 
-    <!-- CARDIO -->
+        <div class="categoria">
 
-    <h2 class="categoria-titulo">🏃 Cardio</h2>
+            <h2>⚙️ Máquinas Profesionales</h2>
 
-    <div class="accordion mb-5" id="cardio">
-
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#cinta">
-                    🏃 Cinta de Correr - $450.000
-                </button>
-            </h2>
-            <div id="cinta" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    Equipo profesional con velocidad regulable,
-                    inclinación automática y monitoreo cardíaco.
-
-                    <button class="btn btn-success mt-3"
-                            onclick="alert('Compra realizada correctamente')">
-                        Comprar
-                    </button>
+            <div class="producto">
+                <div class="producto-info">
+                    <h5>Polea Multifunción</h5>
+                    <p>Entrenamiento completo para todos los grupos musculares.</p>
                 </div>
+                <div class="stock">🟢 Stock</div>
+                <div class="precio">$4.500.000</div>
+                <button class="btn-comprar">Comprar</button>
             </div>
+
+            <div class="producto">
+                <div class="producto-info">
+                    <h5>Smith Machine</h5>
+                    <p>Sistema guiado para movimientos compuestos seguros.</p>
+                </div>
+                <div class="stock">🟢 Stock</div>
+                <div class="precio">$6.200.000</div>
+                <button class="btn-comprar">Comprar</button>
+            </div>
+
         </div>
 
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#bici">
-                    🚴 Bicicleta Fija - $280.000
-                </button>
-            </h2>
-            <div id="bici" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    Ideal para mejorar resistencia cardiovascular y
-                    fortalecer piernas con entrenamiento de bajo impacto.
+        <!-- RUTINAS -->
 
-                    <button class="btn btn-success mt-3"
-                            onclick="alert('Compra realizada correctamente')">
-                        Comprar
-                    </button>
+        <div class="categoria">
+
+            <h2>📋 Rutinas Profesionales</h2>
+
+            <div class="producto">
+                <div class="producto-info">
+                    <h5>💪 Hipertrofia Muscular</h5>
+                    <p>Programa de 12 semanas para maximizar el crecimiento muscular.</p>
                 </div>
+                <div class="stock">✔ Disponible</div>
+                <div class="precio">$34.900</div>
+                <button class="btn-rutina">Contratar</button>
             </div>
+
+            <div class="producto">
+                <div class="producto-info">
+                    <h5>🔥 Pérdida de Grasa</h5>
+                    <p>Plan enfocado en reducción de tejido adiposo.</p>
+                </div>
+                <div class="stock">✔ Disponible</div>
+                <div class="precio">$24.900</div>
+                <button class="btn-rutina">Contratar</button>
+            </div>
+
+            <div class="producto">
+                <div class="producto-info">
+                    <h5>⚡ Recomposición Corporal</h5>
+                    <p>Incremento muscular y reducción de grasa corporal.</p>
+                </div>
+                <div class="stock">✔ Disponible</div>
+                <div class="precio">$29.900</div>
+                <button class="btn-rutina">Contratar</button>
+            </div>
+
         </div>
 
-    </div>
+        <!-- BENEFICIOS -->
 
-    <!-- FUNCIONAL -->
+        <div class="beneficios">
 
-    <h2 class="categoria-titulo">💪 Entrenamiento Funcional</h2>
-
-    <div class="accordion mb-5" id="funcional">
-
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#kettlebell">
-                    💪 Kettlebell 16kg - $45.000
-                </button>
-            </h2>
-            <div id="kettlebell" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    Excelente para ejercicios explosivos,
-                    fuerza funcional y acondicionamiento físico.
-
-                    <button class="btn btn-success mt-3"
-                            onclick="alert('Compra realizada correctamente')">
-                        Comprar
-                    </button>
-                </div>
+            <div class="beneficio">
+                <h4>🏅 Calidad Profesional</h4>
+                <p>Equipamiento para uso intensivo.</p>
             </div>
-        </div>
 
-    </div>
-
-    <!-- MAQUINAS -->
-
-    <h2 class="categoria-titulo">⚙️ Máquinas Profesionales</h2>
-
-    <div class="accordion mb-5" id="maquinas">
-
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#polea">
-                    ⚙️ Máquina Polea Multifunción - $650.000
-                </button>
-            </h2>
-            <div id="polea" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    Estación completa para entrenar todos los grupos
-                    musculares mediante múltiples configuraciones.
-
-                    <button class="btn btn-success mt-3"
-                            onclick="alert('Compra realizada correctamente')">
-                        Comprar
-                    </button>
-                </div>
+            <div class="beneficio">
+                <h4>🛡️ Garantía Oficial</h4>
+                <p>Respaldo sobre defectos de fabricación.</p>
             </div>
+
+            <div class="beneficio">
+                <h4>🎧 Asesoramiento</h4>
+                <p>Atención especializada para cada cliente.</p>
+            </div>
+
+            <div class="beneficio">
+                <h4>🚚 Envíos Nacionales</h4>
+                <p>Cobertura logística en todo el país.</p>
+            </div>
+
         </div>
-
-    </div>
-
-    <div class="mensaje-final">
-
-        <h3>🔥 Transformá tu entrenamiento</h3>
-
-        <p>
-            En GymTech ofrecemos equipamiento diseñado para ayudarte
-            a alcanzar tus objetivos físicos con calidad profesional,
-            seguridad y máximo rendimiento.
-        </p>
 
     </div>
 
 </div>
 
-</div>
-
-</body>
 </html>
