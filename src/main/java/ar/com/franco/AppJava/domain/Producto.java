@@ -11,8 +11,12 @@ public class Producto extends Persisteble{
 		
 		@Column(name = "precio")
 		private int precio;
+		
 		@Column(name = "nombre")
 		private String nombre;
+		
+	    @Column(name = "stock")
+	    private int stock;
 				
 		public Producto(String nombre, int precio) {
 			this.nombre = nombre;
@@ -40,5 +44,13 @@ public class Producto extends Persisteble{
 
 		public void setPrecio(int precio) {
 			this.precio = precio;
+		}
+		
+		public int getStock() {
+			return stock;
+		}
+
+		public void setStock(int stock) {
+			this.stock = stock;
 		}
 }

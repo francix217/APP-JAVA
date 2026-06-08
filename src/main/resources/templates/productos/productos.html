@@ -35,10 +35,11 @@
                 </div>
                 <div class="stock">🟢 Stock</div>
                 <div class="precio">$380.000</div>
-                <button class="btn-comprar"
-        onclick="alert('🏋️ Press de Banca Profesional agregado al pedido correctamente.')">
-    			Comprar
-				</button>
+				<form th:action="@{/compra/{id}(id=1)}" method="get">
+    				<button class="btn-comprar">
+        				Comprar
+    				</button>
+				</form>
             </div>
 
             <div class="producto">
@@ -48,10 +49,11 @@
                 </div>
                 <div class="stock">🟢 Stock</div>
                 <div class="precio">$290.000</div>
-                <button class="btn-comprar"
-        		onclick="alert('🏋️ Barra Olímpica 20kg agregada al pedido correctamente.')">
-    			Comprar
-				</button>
+				<form th:action="@{/compra/{id}(id=2)}" method="get">
+    				<button class="btn-comprar">
+        				Comprar
+    				</button>
+				</form>
             </div>
 
             <div class="producto">
@@ -61,10 +63,11 @@
                 </div>
                 <div class="stock">🟢 Stock</div>
                 <div class="precio">$1.450.000</div>
-                <button class="btn-comprar"
-        		onclick="alert('🏋️ Power Rack Profesional agregado al pedido correctamente.')">
-    			Comprar
-				</button>
+				<form th:action="@{/compra/{id}(id=3)}" method="get">
+    				<button class="btn-comprar">
+        				Comprar
+    				</button>
+				</form>
             </div>
 
         </div>
@@ -82,10 +85,11 @@
                 </div>
                 <div class="stock">🟢 Stock</div>
                 <div class="precio">$2.300.000</div>
-                <button class="btn-comprar"
-        		onclick="alert('🏃 Cinta Profesional agregada al pedido correctamente.')">
-    			Comprar
-				</button>
+				<form th:action="@{/compra/{id}(id=4)}" method="get">
+    				<button class="btn-comprar">
+        				Comprar
+    				</button>
+				</form>
             </div>
 
             <div class="producto">
@@ -95,10 +99,11 @@
                 </div>
                 <div class="stock">🟢 Stock</div>
                 <div class="precio">$1.150.000</div>
-                <button class="btn-comprar"
-        		onclick="alert('🏃 Air Bike agregada al pedido correctamente.')">
-    			Comprar
-				</button>
+				<form th:action="@{/compra/{id}(id=5)}" method="get">
+    				<button class="btn-comprar">
+        				Comprar
+    				</button>
+				</form>
             </div>
 
         </div>
@@ -116,10 +121,11 @@
                 </div>
                 <div class="stock">🟢 Stock</div>
                 <div class="precio">$75.000</div>
-                <button class="btn-comprar"
-        		onclick="alert('💪 Kettlebell 16kg agregada al pedido correctamente.')">
-    			Comprar
-				</button>
+					<form th:action="@{/compra/{id}(id=6)}" method="get">
+    					<button class="btn-comprar">
+        					Comprar
+    					</button>
+					</form>
             </div>
 
             <div class="producto">
@@ -129,10 +135,11 @@
                 </div>
                 <div class="stock">🟢 Stock</div>
                 <div class="precio">$160.000</div>
-                <button class="btn-comprar"
-        		onclick="alert('💪 Battle Rope agregada al pedido correctamente.')">
-    			Comprar
-				</button>
+				<form th:action="@{/compra/{id}(id=7)}" method="get">
+    				<button class="btn-comprar">
+        				Comprar
+    				</button>
+				</form>
             </div>
 
         </div>
@@ -150,10 +157,11 @@
                 </div>
                 <div class="stock">🟢 Stock</div>
                 <div class="precio">$4.500.000</div>
-                <button class="btn-comprar"
-        		onclick="alert('⚙️ Polea Multifunción agregada al pedido correctamente.')">
-    			Comprar
-				</button>
+				<form th:action="@{/compra/{id}(id=8)}" method="get">
+    				<button class="btn-comprar">
+        				Comprar
+    				</button>
+				</form>
             </div>
 
             <div class="producto">
@@ -163,10 +171,11 @@
                 </div>
                 <div class="stock">🟢 Stock</div>
                 <div class="precio">$6.200.000</div>
-                <button class="btn-comprar"
-        		onclick="alert('⚙️ Smith Machine agregada al pedido correctamente.')">
-    			Comprar
-				</button>
+				<form th:action="@{/compra/{id}(id=9)}" method="get">
+    				<button class="btn-comprar">
+        				Comprar
+    				</button>
+				</form>
             </div>
 
         </div>
@@ -184,10 +193,11 @@
                 </div>
                 <div class="stock">✔ Disponible</div>
                 <div class="precio">$34.900</div>
-                <button class="btn-rutina"
-        		onclick="alert('💪 Plan de Hipertrofia Muscular contratado correctamente.')">
-    			Contratar
-				</button>
+				<form th:action="@{/compra/{id}(id=10)}" method="get">
+    				<button class="btn-comprar">
+        				Comprar
+    				</button>
+				</form>
             </div>
 
             <div class="producto">
@@ -197,10 +207,11 @@
                 </div>
                 <div class="stock">✔ Disponible</div>
                 <div class="precio">$24.900</div>
-                <button class="btn-rutina"
-       			onclick="alert('🔥 Plan de Pérdida de Grasa contratado correctamente.')">
-    			Contratar
-				</button>
+				<form th:action="@{/compra/{id}(id=11)}" method="get">
+    				<button class="btn-comprar">
+        				Comprar
+    				</button>
+				</form>
             </div>
 
             <div class="producto">
@@ -210,10 +221,11 @@
                 </div>
                 <div class="stock">✔ Disponible</div>
                 <div class="precio">$29.900</div>
-                <button class="btn-rutina"
-        		onclick="alert('⚡ Plan de Recomposición Corporal contratado correctamente.')">
-    			Contratar
-				</button>
+				<form th:action="@{/compra/{id}(id=12)}" method="get">
+    				<button class="btn-comprar">
+        				Comprar
+    				</button>
+				</form>
             </div>
 
         </div>
