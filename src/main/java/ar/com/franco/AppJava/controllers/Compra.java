@@ -18,7 +18,7 @@ public class Compra {
 
     @Autowired
     private ProducRepository productoRepository;
-
+    
     @GetMapping("/{id}")
     public String compra(@PathVariable Long id,
                          Model model) {
@@ -30,7 +30,7 @@ public class Compra {
 
         return "compra";
     }
-
+    
     @PostMapping("/confirmar")
     public String confirmar(@RequestParam Long idProducto,
                             @RequestParam int cantidad) {

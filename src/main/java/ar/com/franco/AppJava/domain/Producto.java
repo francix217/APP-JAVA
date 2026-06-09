@@ -17,11 +17,15 @@ public class Producto extends Persisteble{
 		
 	    @Column(name = "stock")
 	    private int stock;
+	    
+	    public Producto() {
+	    }
 				
-		public Producto(String nombre, int precio) {
-			this.nombre = nombre;
-			this.precio = precio;
-		}
+	    public Producto(String nombre, int precio, int stock) {
+	        this.nombre = nombre;
+	        this.precio = precio;
+	        this.stock = stock;
+	    }
 		
 		public void mostrarProducto(){
 			System.out.println("Nombre: " + nombre);

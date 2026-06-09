@@ -24,8 +24,8 @@ public class JWTServiceImp implements JWTService {
 	private final String KEY_AUTHORIZATION = "authorization";
 	private final String KEY_USERNAME = "Username";
 	
-	@Value("${jwt.secret.password}")
-	private String secretPassword;
+	//@Value("${jwt.secret.password}")
+	private String secretPassword = "12345";
 	
 	@Override
 	public String buildToken(Usuario usuario) {
