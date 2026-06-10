@@ -20,7 +20,7 @@ public class Compra {
     private ProducRepository productoRepository;
     
     @GetMapping("/{id}")
-    public String compra(@PathVariable Long id,
+    public String compra(@PathVariable(name = "id") Long id,
                          Model model) {
 
         Producto producto =
@@ -28,12 +28,12 @@ public class Compra {
 
         model.addAttribute("producto", producto);
 
-        return "compra";
+        return "compra/compra";
     }
     
     @PostMapping("/confirmar")
-    public String confirmar(@RequestParam Long idProducto,
-                            @RequestParam int cantidad) {
+    public String confirmar(@RequestParam(name = "idProducto") Long idProducto,
+                            @RequestParam(name = "cantidad") int cantidad) {
 
         Producto producto =
                 productoRepository.findById(idProducto).get();
@@ -52,6 +52,6 @@ public class Compra {
 
         productoRepository.save(producto);
 
-        return "redirect:/verproductos";
+        return "redirect:/verProductos";
     }
 }

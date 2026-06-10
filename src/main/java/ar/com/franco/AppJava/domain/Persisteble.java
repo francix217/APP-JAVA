@@ -14,7 +14,7 @@ public abstract class Persisteble {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	public Long getid() {
+	public Long getId() {
 		return id;
 	}
 }
